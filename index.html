@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Anton&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/issue-02-cover.png" fetchpriority="high">
+    <link rel="preload" as="image" href="/issue-02-cover.avif" type="image/avif" fetchpriority="high">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -134,7 +134,10 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="cover-wrap">
-                <img class="cover" src="/issue-02-cover.png" alt="Autostraddle Print Issue #02 — King of Hearts" fetchpriority="high">
+                <picture>
+                    <source srcset="/issue-02-cover.avif" type="image/avif">
+                    <img class="cover" src="/issue-02-cover.png" srcset="/issue-02-cover-600.png 600w, /issue-02-cover.png 1000w" sizes="(max-width: 880px) 360px, 420px" alt="Autostraddle Print Issue #02 — King of Hearts" fetchpriority="high" decoding="async">
+                </picture>
             </div>
 
             <div class="pitch">
