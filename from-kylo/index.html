@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Note From Kylo — Autostraddle Print</title>
+    <meta name="description" content="If the article meant something to you, this is how stories like it keep getting made. The Autostraddle print magazine, $8.17/month billed annually. Cancel anytime.">
+    <meta property="og:title" content="A Note From Kylo — Autostraddle Print">
+    <meta property="og:description" content="Member-funded queer journalism. The print magazine, delivered. $8.17/month, billed annually.">
+    <meta property="og:image" content="https://zinemedia.forthem.com/issue-02-cover.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Anton&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/from-kylo/kylo-note-poster.jpg" fetchpriority="high">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N3ZZQZ5');</script>
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNG8312HSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZNG8312HSQ');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1316224412230662');
+        fbq('track', 'PageView');
+    </script>
+
+    <!-- Klaviyo -->
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XNpm6E"></script>
+    <script>window._learnq = window._learnq || [];</script>
+
+    <!-- PostHog -->
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]);t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_aZFN69FhB54tFgJg4oAgPm9NNUkJlKvkA5JK652yNwk', { api_host: 'https://us.i.posthog.com', person_profiles: 'identified_only' });
+    </script>
+
+    <style>
+        :root {
+            --bg: #f5f1e6;
+            --ink: #0a0029;
+            --grass: #c8d44a;
+            --pink: #ff5b8a;
+            --muted: #6b6478;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { background: var(--bg); color: var(--ink); font-family: 'Roboto Mono', monospace; -webkit-font-smoothing: antialiased; }
+        body { min-height: 100vh; display: flex; flex-direction: column; }
+
+        .page { flex: 1; }
+
+        .hero { display: grid; place-items: center; padding: 3rem 1.25rem 4rem; }
+        .hero-inner { max-width: 1080px; width: 100%; display: grid; gap: 2rem; grid-template-areas: "head" "media" "rest" "cta"; }
+        .hero-head { grid-area: head; }
+        .media-wrap { grid-area: media; }
+        .pitch-rest { grid-area: rest; }
+        .cta-block { grid-area: cta; margin-top: -1rem; }
+        @media (min-width: 880px) {
+            .hero { padding: 5rem 2rem 6rem; }
+            .hero-inner { grid-template-columns: 1.1fr 1fr; grid-template-areas: "media head" "media rest" "cta cta"; column-gap: 4rem; row-gap: 0; }
+            .media-wrap { align-self: center; }
+            .cta-block { justify-self: center; text-align: center; margin-top: 3rem; }
+            .cta-block .trust { justify-content: center; }
+        }
+
+        .media-wrap { display: grid; place-items: center; }
+        .cover { width: 100%; max-width: 360px; height: auto; filter: drop-shadow(0 24px 30px rgba(10,0,41,0.18)); }
+        @media (min-width: 880px) { .cover { max-width: 420px; } }
+        .kylo-video { width: 100%; max-width: 340px; border-radius: 14px; border: 2px solid var(--ink); background: var(--ink); box-shadow: 0 24px 30px rgba(10,0,41,0.18); display: block; }
+        .video-frame { position: relative; display: inline-block; cursor: pointer; }
+        .sound-hint { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); background: rgba(10,0,41,0.85); color: var(--bg); border: none; border-radius: 999px; padding: 0.55rem 1.1rem; font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; white-space: nowrap; }
+        .video-cap { margin-top: 0.7rem; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); text-align: center; }
+
+        .pitch .kicker { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pink); margin-bottom: 0.9rem; }
+        .pitch h1 { font-family: 'Anton', sans-serif; font-size: clamp(2.6rem, 7vw, 4.5rem); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 1.1rem; }
+        .pitch h1 em { font-style: normal; color: var(--pink); }
+        .pitch .lede { font-size: clamp(1rem, 1.6vw, 1.15rem); line-height: 1.5; color: var(--muted); margin-bottom: 2rem; max-width: 36ch; }
+
+        .price-row { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.4rem; }
+        .price { font-family: 'Anton', sans-serif; font-size: clamp(3rem, 7vw, 4.2rem); line-height: 1; }
+        .per { font-size: 1rem; color: var(--muted); }
+        .billed { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.8rem; }
+
+        .cta { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: var(--ink); color: var(--bg); border: none; padding: 1.1rem 2rem; border-radius: 999px; font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 1rem; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform 0.12s ease, background 0.2s ease; min-width: 280px; }
+        .cta:hover { background: var(--pink); transform: translateY(-1px); }
+        .cta-arrow { font-size: 1.2rem; line-height: 1; }
+
+        .trust { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+        .trust span::before { content: "✓ "; color: var(--grass); font-weight: 700; }
+
+        .why { background: var(--ink); color: var(--bg); padding: 3rem 1.25rem; }
+        .why-inner { max-width: 1080px; margin: 0 auto; display: grid; gap: 1.5rem; }
+        @media (min-width: 880px) { .why-inner { grid-template-columns: repeat(3, 1fr); gap: 3rem; } .why { padding: 4rem 2rem; } }
+        .why-item { text-align: center; }
+        .why-num { font-family: 'Anton', sans-serif; font-size: 3rem; color: var(--grass); line-height: 1; margin-bottom: 0.4rem; }
+        .why-label { font-size: 0.95rem; line-height: 1.4; color: rgba(245,241,230,0.85); }
+
+        .reviews { padding: 4rem 1.25rem 3rem; }
+        .reviews-inner { max-width: 980px; margin: 0 auto; }
+        .reviews h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2rem; }
+        .review-grid { display: grid; gap: 1rem; }
+        @media (min-width: 760px) { .review-grid { grid-template-columns: repeat(3, 1fr); } }
+        .review { background: white; padding: 1.5rem; border: 2px solid var(--ink); }
+        .review p { font-size: 0.95rem; line-height: 1.5; font-style: italic; margin-bottom: 0.9rem; }
+        .review .name { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pink); font-weight: 700; }
+
+        .faq { padding: 3rem 1.25rem 5rem; }
+        .faq-inner { max-width: 720px; margin: 0 auto; }
+        .faq h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2rem; }
+        details { border-bottom: 1px solid rgba(10,0,41,0.15); padding: 1.1rem 0; }
+        details summary { font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; }
+        details summary::-webkit-details-marker { display: none; }
+        details summary::after { content: "+"; font-family: 'Anton', sans-serif; font-size: 1.6rem; line-height: 0.5; transition: transform 0.2s ease; }
+        details[open] summary::after { transform: rotate(45deg); }
+        details p { margin-top: 0.8rem; color: var(--muted); line-height: 1.55; font-size: 0.95rem; }
+        details a { color: var(--ink); font-weight: 700; }
+
+        .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: var(--ink); color: var(--bg); padding: 0.9rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; z-index: 50; box-shadow: 0 -8px 24px rgba(10,0,41,0.15); }
+        .sticky-price { font-family: 'Anton', sans-serif; font-size: 1.3rem; }
+        .sticky-sub { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
+        .sticky-btn { background: var(--grass); color: var(--ink); padding: 0.7rem 1.2rem; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+        @media (min-width: 880px) { .sticky-cta { display: none; } }
+
+        footer { background: var(--ink); color: rgba(245,241,230,0.7); padding: 1.5rem 1.25rem 5rem; text-align: center; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+        @media (min-width: 880px) { footer { padding: 2rem 2rem 2rem; } }
+    </style>
+</head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3ZZQZ5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="page">
+
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="pitch hero-head">
+                <p class="kicker">Hi, it's Kylo. Thanks for reading.</p>
+                <h1>That story was <em>member-funded.</em></h1>
+            </div>
+
+            <div class="media-wrap">
+                <div>
+                    <div class="video-frame" id="kylo-frame">
+                        <video class="kylo-video" autoplay muted loop playsinline preload="auto" poster="/from-kylo/kylo-note-poster.jpg" id="kylo-vid">
+                            <source src="/from-kylo/kylo-note.mp4" type="video/mp4">
+                        </video>
+                        <button class="sound-hint" id="kylo-sound" type="button">&#128266; Tap for sound</button>
+                    </div>
+                    <p class="video-cap">A quick hello from Kylo</p>
+                </div>
+            </div>
+
+            <div class="pitch pitch-rest">
+                <p class="lede">No advertisers, no corporate owner. Members keep Autostraddle independent and get every print issue delivered to their door. If the article meant something to you, this is how stories like it keep getting made.</p>
+
+                <div class="price-row">
+                    <span class="price">$8.17</span>
+                    <span class="per">/month</span>
+                </div>
+                <p class="billed">$98 billed annually · 4 issues a year</p>
+
+            </div>
+
+            <div class="cta-block">
+                <a class="cta" href="https://forthem.com/cart/clear?return_to=%2Fcart%2Fadd%3Fitems%5B0%5D%5Bid%5D%3D44792925257894%26items%5B0%5D%5Bselling_plan%5D%3D1574994086%26items%5B0%5D%5Bquantity%5D%3D1%26items%5B1%5D%5Bid%5D%3D56214999859366%26items%5B1%5D%5Bquantity%5D%3D1%26items%5B2%5D%5Bid%5D%3D46400215023782%26items%5B2%5D%5Bquantity%5D%3D1%26return_to%3D%2Fcheckout%3Futm_source%3Dautostraddle%26utm_medium%3Darticle%26utm_campaign%3Degg-freezing%26utm_term%3Dkylo" data-cta="hero">
+                    Subscribe <span class="cta-arrow">→</span>
+                </a>
+
+                <div class="trust">
+                    <span>Free US shipping</span>
+                    <span>Cancel anytime</span>
+                    <span>Loved by 5,000+ readers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why">
+        <div class="why-inner">
+            <div class="why-item">
+                <div class="why-num">4</div>
+                <p class="why-label">Limited edition<br>print issues a year</p>
+            </div>
+            <div class="why-item">
+                <div class="why-num">200+</div>
+                <p class="why-label">Pages of original queer<br>journalism, photography &amp; art</p>
+            </div>
+            <div class="why-item">
+                <div class="why-num">100%</div>
+                <p class="why-label">Independent &amp; queer-owned.<br>No advertisers, no algorithms.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="reviews-inner">
+            <h2>What subscribers are saying</h2>
+            <div class="review-grid">
+                <div class="review">
+                    <p>"Got mine in the mail today — first purchase of queer media after coming out and must say I'm emotional."</p>
+                    <span class="name">Lydia T.</span>
+                </div>
+                <div class="review">
+                    <p>"Blown away. The design, the artwork, the content and writing — truly so good. As a reader you can see how much heart and soul went into it."</p>
+                    <span class="name">Frances A.</span>
+                </div>
+                <div class="review">
+                    <p>"Always love these Autostraddle zines. I like to get them as soon as they drop because it's such a conversation starter in my living room."</p>
+                    <span class="name">Patches · Verified Purchase</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="faq-inner">
+            <h2>Questions</h2>
+
+            <details>
+                <summary>What exactly am I getting?</summary>
+                <p>Four limited-edition print issues of Autostraddle a year, delivered free to your door. Each issue is 200+ pages of essays, photography, reporting, fiction, comics, and queer-themed puzzles.</p>
+            </details>
+
+            <details>
+                <summary>Can I cancel?</summary>
+                <p>Anytime, in two clicks from your account. No questions, no hidden fees, no auto-renewal traps.</p>
+            </details>
+
+            <details>
+                <summary>What if I don't love my first issue?</summary>
+                <p>Email us and we'll refund you. Keep the magazine either way.</p>
+            </details>
+
+            <details>
+                <summary>Do you ship internationally?</summary>
+                <p>Yes — international shipping is available at checkout for an additional fee. Free shipping applies to US orders.</p>
+            </details>
+
+            <details>
+                <summary>Who's behind it?</summary>
+                <p>Autostraddle is one of the longest-running independent queer media outlets, published by For Them — both led by queer, trans, and lesbian editors, writers, and photographers.</p>
+            </details>
+        </div>
+    </section>
+
+</div>
+
+<div class="sticky-cta">
+    <div>
+        <div class="sticky-price">$8.17/mo</div>
+        <div class="sticky-sub">$98 / year</div>
+    </div>
+    <a class="sticky-btn" href="https://forthem.com/cart/clear?return_to=%2Fcart%2Fadd%3Fitems%5B0%5D%5Bid%5D%3D44792925257894%26items%5B0%5D%5Bselling_plan%5D%3D1574994086%26items%5B0%5D%5Bquantity%5D%3D1%26items%5B1%5D%5Bid%5D%3D56214999859366%26items%5B1%5D%5Bquantity%5D%3D1%26items%5B2%5D%5Bid%5D%3D46400215023782%26items%5B2%5D%5Bquantity%5D%3D1%26return_to%3D%2Fcheckout%3Futm_source%3Dautostraddle%26utm_medium%3Darticle%26utm_campaign%3Degg-freezing%26utm_term%3Dkylo" data-cta="sticky">Subscribe →</a>
+</div>
+
+<footer>
+    Autostraddle Print · A For Them publication · Brooklyn, NY
+</footer>
+
+<script>
+    // Preserve incoming UTMs through to checkout (fixes the utm-overwrite leak the
+    // other landing pages have). Defaults match the article link; any UTM present
+    // on this page's URL wins.
+    (function () {
+        var defaults = { utm_source: 'autostraddle', utm_medium: 'article', utm_campaign: 'egg-freezing', utm_term: 'kylo' };
+        var incoming = new URLSearchParams(location.search);
+        var utms = {};
+        Object.keys(defaults).forEach(function (k) { utms[k] = incoming.get(k) || defaults[k]; });
+        if (incoming.get('utm_content')) { utms.utm_content = incoming.get('utm_content'); }
+
+        var checkout = '/checkout?' + Object.keys(utms).map(function (k) {
+            return k + '=' + encodeURIComponent(utms[k]);
+        }).join('&');
+        var cartAdd = '/cart/add?' + [
+            'items[0][id]=44792925257894', 'items[0][selling_plan]=1574994086', 'items[0][quantity]=1',
+            'items[1][id]=56214999859366', 'items[1][quantity]=1',
+            'items[2][id]=46400215023782', 'items[2][quantity]=1'
+        ].join('&') + '&return_to=' + encodeURIComponent(checkout);
+        var href = 'https://forthem.com/cart/clear?return_to=' + encodeURIComponent(cartAdd);
+
+        document.querySelectorAll('[data-cta]').forEach(function (el) { el.href = href; });
+    })();
+
+    document.querySelectorAll('[data-cta]').forEach(el => {
+        el.addEventListener('click', function () {
+            const loc = this.getAttribute('data-cta');
+            const plan = 'annual';
+            const value = 98;
+
+            if (typeof posthog !== 'undefined') {
+                posthog.capture('kyloarticle_cta_clicked', { position: loc, plan: plan, page: 'from_kylo_article', value: value });
+            }
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'kyloarticle_signup_intent', {
+                    currency: 'USD', value: value,
+                    plan_type: 'magazine-subscription',
+                    billing_cycle: plan,
+                    button_location: loc,
+                    source_page: 'from_kylo_article'
+                });
+            }
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'AddToCart', {
+                    content_ids: ['44792925257894', '56214999859366', '46400215023782'],
+                    content_type: 'product',
+                    content_category: 'from_kylo_article',
+                    value: value, currency: 'USD'
+                });
+                fbq('track', 'InitiateCheckout', {
+                    value: value, currency: 'USD',
+                    num_items: 3,
+                    content_category: 'kyloarticle_' + plan
+                });
+                fbq('trackCustom', 'KyloArticleSignupIntent', { plan: plan, value: value, currency: 'USD', button_location: loc });
+            }
+            if (typeof _learnq !== 'undefined') {
+                _learnq.push(['track', 'Started Checkout', {
+                    $event_id: 'kyloarticle_' + loc + '_' + Date.now(),
+                    $value: value,
+                    ItemNames: ['AF+ All-Access Annual', 'Autostraddle Print Issue #02', 'Very Gay Sticker Pack'],
+                    Categories: ['Magazine Subscription'],
+                    CheckoutURL: this.href,
+                    source: 'from_kylo_article',
+                    plan: plan,
+                    button_location: loc
+                }]);
+                _learnq.push(['track', 'KyloArticle Signup Intent', {
+                    plan: plan, value: value, button_location: loc, source: 'from_kylo_article'
+                }]);
+            }
+        });
+    });
+
+    if (typeof posthog !== 'undefined') {
+        posthog.capture('kyloarticle_page_viewed', { page: 'from_kylo_article', referrer: document.referrer || 'direct' });
+    }
+
+    // Muted autoplay with tap-for-sound: first tap unmutes, restarts from the
+    // top (so nobody joins mid-sentence), stops looping, and shows controls.
+    var vid = document.getElementById('kylo-vid');
+    var frame = document.getElementById('kylo-frame');
+    var hint = document.getElementById('kylo-sound');
+    if (vid && frame && hint) {
+        var unmuted = false;
+        frame.addEventListener('click', function () {
+            if (unmuted) { return; }
+            unmuted = true;
+            vid.muted = false;
+            vid.loop = false;
+            vid.currentTime = 0;
+            vid.controls = true;
+            frame.style.cursor = 'default';
+            hint.style.display = 'none';
+            vid.play();
+            if (typeof posthog !== 'undefined') { posthog.capture('kyloarticle_video_unmuted', { page: 'from_kylo_article' }); }
+            if (typeof gtag !== 'undefined') { gtag('event', 'kyloarticle_video_unmuted', { source_page: 'from_kylo_article' }); }
+        });
+    }
+</script>
+
+</body>
+</html>
