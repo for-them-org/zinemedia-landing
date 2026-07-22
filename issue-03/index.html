@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autostraddle Issue #03 — Sporty Spice. Be Gay. Do Sports.</title>
+    <meta name="description" content="Autostraddle Print Issue #03 is here. 200+ pages of queer sports obsession, free with membership. Be gay. Do sports.">
+    <meta property="og:title" content="Autostraddle Issue #03 — Sporty Spice">
+    <meta property="og:description" content="Be gay. Do sports. Issue #03 ships now, free with membership.">
+    <meta property="og:image" content="https://zinemedia.forthem.com/issue-03/issue-03-cover-stack.jpg">
+    <meta property="og:url" content="https://zinemedia.forthem.com/issue-03/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Anton&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/issue-03/issue-03-cover-stack.jpg" fetchpriority="high">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N3ZZQZ5');</script>
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNG8312HSQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZNG8312HSQ');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1316224412230662');
+        fbq('track', 'PageView');
+    </script>
+
+    <!-- Klaviyo -->
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XNpm6E"></script>
+    <script>window._learnq = window._learnq || [];</script>
+
+    <!-- PostHog -->
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]);t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_aZFN69FhB54tFgJg4oAgPm9NNUkJlKvkA5JK652yNwk', { api_host: 'https://us.i.posthog.com', person_profiles: 'identified_only' });
+    </script>
+
+    <style>
+        :root {
+            --bg: #f5f1e6;          /* house LP cream */
+            --hero-bg: #e2edff;     /* matches the mockup ground */
+            --ink: #0a0029;         /* house LP ink */
+            --orange: #e84e28;      /* Issue 03 key colour */
+            --green: #006838;       /* Issue 03 key colour */
+            --muted: #6b6478;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { background: var(--bg); color: var(--ink); font-family: 'Roboto Mono', monospace; -webkit-font-smoothing: antialiased; }
+        body { min-height: 100vh; display: flex; flex-direction: column; }
+        .page { flex: 1; }
+
+        .hero { background: var(--hero-bg); display: grid; place-items: center; padding: 3rem 1.25rem 4rem; }
+        .hero-inner { max-width: 1080px; width: 100%; display: grid; gap: 2rem; }
+        @media (min-width: 880px) {
+            .hero { padding: 4.5rem 2rem 5.5rem; }
+            .hero-inner { grid-template-columns: 1.1fr 1fr; align-items: center; gap: 4rem; }
+        }
+
+        .cover-wrap { display: grid; place-items: center; }
+        .cover { width: 100%; max-width: 420px; height: auto; }
+        @media (min-width: 880px) { .cover { max-width: 500px; } }
+
+        .pitch .kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.9rem; }
+        .pitch h1 { font-family: 'Anton', sans-serif; font-size: clamp(2.8rem, 8vw, 5rem); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 1.1rem; }
+        .pitch h1 em { font-style: normal; color: var(--green); }
+        .pitch .lede { font-size: clamp(1rem, 1.6vw, 1.15rem); line-height: 1.5; color: var(--muted); margin-bottom: 2rem; max-width: 38ch; }
+        .pitch .lede strong { color: var(--ink); }
+
+        .plans { display: grid; gap: 0.9rem; max-width: 460px; }
+        .plan { border: 2px solid var(--ink); background: white; padding: 1.1rem 1.25rem; display: grid; gap: 0.55rem; text-decoration: none; color: var(--ink); transition: transform 0.12s ease, box-shadow 0.12s ease; position: relative; }
+        .plan:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--ink); }
+        .plan-tag { position: absolute; top: -0.85rem; left: 1rem; background: var(--orange); color: white; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.25rem 0.6rem; }
+        .plan-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
+        .plan-name { font-family: 'Anton', sans-serif; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 0.02em; }
+        .plan-price { font-family: 'Anton', sans-serif; font-size: 1.35rem; color: var(--green); white-space: nowrap; }
+        .plan-price small { font-family: 'Roboto Mono', monospace; font-size: 0.7rem; color: var(--muted); font-weight: 400; }
+        .plan-perks { list-style: none; font-size: 0.82rem; line-height: 1.45; color: var(--muted); }
+        .plan-perks li::before { content: "✓ "; color: var(--green); font-weight: 700; }
+        .plan-cta { justify-self: start; background: var(--ink); color: white; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.65rem 1.3rem; border-radius: 999px; margin-top: 0.25rem; }
+        .plan:hover .plan-cta { background: var(--orange); }
+
+        .trust { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+        .trust span::before { content: "✓ "; color: var(--green); font-weight: 700; }
+
+        .why { background: var(--ink); color: var(--bg); padding: 3rem 1.25rem; }
+        .why-inner { max-width: 1080px; margin: 0 auto; display: grid; gap: 1.5rem; }
+        @media (min-width: 880px) { .why-inner { grid-template-columns: repeat(3, 1fr); gap: 3rem; } .why { padding: 4rem 2rem; } }
+        .why-item { text-align: center; }
+        .why-num { font-family: 'Anton', sans-serif; font-size: 3rem; color: var(--orange); line-height: 1; margin-bottom: 0.4rem; }
+        .why-label { font-size: 0.95rem; line-height: 1.4; color: rgba(245,241,230,0.85); }
+
+        .inside { padding: 4rem 1.25rem 1rem; }
+        .inside-inner { max-width: 980px; margin: 0 auto; }
+        .inside h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2rem; }
+        .inside-grid { display: grid; gap: 1rem; }
+        @media (min-width: 760px) { .inside-grid { grid-template-columns: 1fr 1fr; } }
+        .inside-grid img { width: 100%; height: auto; border: 2px solid var(--ink); background: white; }
+
+        .gift { padding: 3rem 1.25rem; }
+        .gift-inner { max-width: 980px; margin: 0 auto; background: var(--green); color: white; display: grid; gap: 0; overflow: hidden; }
+        @media (min-width: 760px) { .gift-inner { grid-template-columns: 1fr 1.4fr; align-items: center; } }
+        .gift-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .gift-copy { padding: 2rem 1.75rem; }
+        .gift-copy .kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bg); opacity: 0.75; margin-bottom: 0.7rem; }
+        .gift-copy h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.7rem, 3.5vw, 2.4rem); text-transform: uppercase; line-height: 1.02; margin-bottom: 0.8rem; }
+        .gift-copy p { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.88); }
+
+        .reviews { padding: 3rem 1.25rem; }
+        .reviews-inner { max-width: 980px; margin: 0 auto; }
+        .reviews h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2rem; }
+        .review-grid { display: grid; gap: 1rem; }
+        @media (min-width: 760px) { .review-grid { grid-template-columns: repeat(3, 1fr); } }
+        .review { background: white; padding: 1.5rem; border: 2px solid var(--ink); }
+        .review p { font-size: 0.95rem; line-height: 1.5; font-style: italic; margin-bottom: 0.9rem; }
+        .review .name { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); font-weight: 700; }
+
+        .faq { padding: 3rem 1.25rem 5rem; }
+        .faq-inner { max-width: 720px; margin: 0 auto; }
+        .faq h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2rem; }
+        details { border-bottom: 1px solid rgba(10,0,41,0.15); padding: 1.1rem 0; }
+        details summary { font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; }
+        details summary::-webkit-details-marker { display: none; }
+        details summary::after { content: "+"; font-family: 'Anton', sans-serif; font-size: 1.6rem; line-height: 0.5; transition: transform 0.2s ease; }
+        details[open] summary::after { transform: rotate(45deg); }
+        details p { margin-top: 0.8rem; color: var(--muted); line-height: 1.55; font-size: 0.95rem; }
+        details a { color: var(--ink); font-weight: 700; }
+
+        .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: var(--ink); color: var(--bg); padding: 0.9rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; z-index: 50; box-shadow: 0 -8px 24px rgba(10,0,41,0.15); }
+        .sticky-price { font-family: 'Anton', sans-serif; font-size: 1.3rem; }
+        .sticky-sub { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
+        .sticky-btn { background: var(--orange); color: white; padding: 0.7rem 1.2rem; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+        @media (min-width: 880px) { .sticky-cta { display: none; } }
+
+        footer { background: var(--ink); color: rgba(245,241,230,0.7); padding: 1.5rem 1.25rem 5rem; text-align: center; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+        @media (min-width: 880px) { footer { padding: 2rem 2rem 2rem; } }
+    </style>
+</head>
+<body>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3ZZQZ5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="page">
+
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="cover-wrap">
+                <img class="cover" src="/issue-03/issue-03-cover-stack.jpg" alt="Autostraddle Print Issue #03 — Sporty Spice. Be Gay Do Sports cover, Fall 2026" fetchpriority="high" decoding="async">
+            </div>
+
+            <div class="pitch">
+                <p class="kicker">Autostraddle Print · Issue #03 · Fall 2026</p>
+                <h1>Be gay. <em>Do sports.</em></h1>
+                <p class="lede"><strong>Sporty Spice is here.</strong> 200+ pages of queer sports obsession — essays, photography, reported features, and puzzles. Join now and Issue #03 ships to your door, <strong>free with membership</strong>.</p>
+
+                <div class="plans">
+                    <a class="plan" href="#" data-cta="hero-annual" data-plan="annual">
+                        <span class="plan-tag">Comes with a foam finger</span>
+                        <span class="plan-head">
+                            <span class="plan-name">Annual</span>
+                            <span class="plan-price">$8.17/mo <small>· $98 billed yearly</small></span>
+                        </span>
+                        <ul class="plan-perks">
+                            <li>Issue #03 ships now — free</li>
+                            <li>4 print issues a year</li>
+                            <li>Free Sports Gay Foam Finger</li>
+                            <li>Free US shipping</li>
+                        </ul>
+                        <span class="plan-cta">Join annual →</span>
+                    </a>
+
+                    <a class="plan" href="#" data-cta="hero-quarterly" data-plan="quarterly">
+                        <span class="plan-head">
+                            <span class="plan-name">Quarterly</span>
+                            <span class="plan-price">$28/qtr</span>
+                        </span>
+                        <ul class="plan-perks">
+                            <li>Issue #03 ships now — free</li>
+                            <li>A new issue every quarter</li>
+                        </ul>
+                        <span class="plan-cta">Join quarterly →</span>
+                    </a>
+                </div>
+
+                <div class="trust">
+                    <span>Cancel anytime</span>
+                    <span>Loved by 5,000+ readers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why">
+        <div class="why-inner">
+            <div class="why-item">
+                <div class="why-num">200+</div>
+                <p class="why-label">Pages of original queer<br>journalism, photography &amp; art</p>
+            </div>
+            <div class="why-item">
+                <div class="why-num">4</div>
+                <p class="why-label">Limited edition<br>print issues a year</p>
+            </div>
+            <div class="why-item">
+                <div class="why-num">100%</div>
+                <p class="why-label">Independent &amp; queer-owned.<br>No advertisers, no algorithms.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="inside">
+        <div class="inside-inner">
+            <h2>Inside the sports issue</h2>
+            <div class="inside-grid">
+                <img src="/issue-03/issue-03-open.jpg" alt="Autostraddle Issue #03 open to a feature spread" loading="lazy" decoding="async">
+                <img src="/issue-03/issue-03-spread.jpg" alt="Collage art spread inside Autostraddle Issue #03" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </section>
+
+    <section class="gift">
+        <div class="gift-inner">
+            <img class="gift-img" src="/issue-03/foam-finger.jpg" alt="Sports Gay mini foam finger" loading="lazy" decoding="async">
+            <div class="gift-copy">
+                <p class="kicker">Annual members only</p>
+                <h2>The annual comes with a foam finger.</h2>
+                <p>A mini foam finger for the gay sports fan who wants everyone to know they're gay and also love sports. Free with annual membership, while they last.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="reviews-inner">
+            <h2>What subscribers are saying</h2>
+            <div class="review-grid">
+                <div class="review">
+                    <p>"Got mine in the mail today — first purchase of queer media after coming out and must say I'm emotional."</p>
+                    <span class="name">Lydia T.</span>
+                </div>
+                <div class="review">
+                    <p>"Blown away. The design, the artwork, the content and writing — truly so good. As a reader you can see how much heart and soul went into it."</p>
+                    <span class="name">Frances A.</span>
+                </div>
+                <div class="review">
+                    <p>"Always love these Autostraddle zines. I like to get them as soon as they drop because it's such a conversation starter in my living room."</p>
+                    <span class="name">Patches · Verified Purchase</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="faq-inner">
+            <h2>Questions</h2>
+
+            <details>
+                <summary>What exactly am I getting?</summary>
+                <p>An Autostraddle membership with the print magazine included. Issue #03 — Sporty Spice — ships to you now, free. After that, every new issue lands on your doorstep as it comes out, four a year, 200+ pages each of essays, photography, reporting, fiction, comics, and queer-themed puzzles.</p>
+            </details>
+
+            <details>
+                <summary>Which issue arrives first?</summary>
+                <p>Issue #03, the sports issue — it ships when you join. Your next one is Issue #04 when it exists.</p>
+            </details>
+
+            <details>
+                <summary>Can I cancel?</summary>
+                <p>Anytime, in two clicks from your account. No questions, no hidden fees, no auto-renewal traps.</p>
+            </details>
+
+            <details>
+                <summary>What if I don't love my first issue?</summary>
+                <p>Email us and we'll refund you. Keep the magazine either way.</p>
+            </details>
+
+            <details>
+                <summary>Do you ship internationally?</summary>
+                <p>Yes — international shipping is available at checkout for an additional fee. Free shipping applies to US orders.</p>
+            </details>
+
+            <details>
+                <summary>Who's behind it?</summary>
+                <p>Autostraddle is one of the longest-running independent queer media outlets, published by For Them — both led by queer, trans, and lesbian editors, writers, and photographers.</p>
+            </details>
+        </div>
+    </section>
+
+</div>
+
+<div class="sticky-cta">
+    <div>
+        <div class="sticky-price">$8.17/mo</div>
+        <div class="sticky-sub">Issue #03 free · annual</div>
+    </div>
+    <a class="sticky-btn" href="#" data-cta="sticky-annual" data-plan="annual">Join →</a>
+</div>
+
+<footer>
+    Autostraddle Print · A For Them publication · Brooklyn, NY
+</footer>
+
+<script>
+    // Build cart links with UTM passthrough (organic social: link params override defaults).
+    (function () {
+        var defaults = { utm_source: 'social', utm_medium: 'organic-social', utm_campaign: 'issue03-launch' };
+        var incoming = new URLSearchParams(location.search);
+        var utms = {};
+        Object.keys(defaults).forEach(function (k) { utms[k] = incoming.get(k) || defaults[k]; });
+        ['utm_content', 'utm_term'].forEach(function (k) { if (incoming.get(k)) { utms[k] = incoming.get(k); } });
+
+        var checkout = '/checkout?' + Object.keys(utms).map(function (k) {
+            return k + '=' + encodeURIComponent(utms[k]);
+        }).join('&');
+
+        var carts = {
+            annual: [
+                'items[0][id]=44792925257894', 'items[0][selling_plan]=1574994086', 'items[0][quantity]=1',
+                'items[1][id]=56688275914918', 'items[1][quantity]=1',
+                'items[2][id]=56641965293734', 'items[2][quantity]=1'
+            ],
+            quarterly: [
+                'items[0][id]=44792925257894', 'items[0][selling_plan]=1580236966', 'items[0][quantity]=1',
+                'items[1][id]=56688275914918', 'items[1][quantity]=1'
+            ]
+        };
+
+        Object.keys(carts).forEach(function (plan) {
+            var cartAdd = '/cart/add?' + carts[plan].join('&') + '&return_to=' + encodeURIComponent(checkout);
+            var href = 'https://forthem.com/cart/clear?return_to=' + encodeURIComponent(cartAdd);
+            document.querySelectorAll('[data-plan="' + plan + '"]').forEach(function (el) { el.href = href; });
+        });
+    })();
+
+    document.querySelectorAll('[data-cta]').forEach(el => {
+        el.addEventListener('click', function () {
+            const loc = this.getAttribute('data-cta');
+            const plan = this.getAttribute('data-plan');
+            const value = plan === 'quarterly' ? 28 : 98;
+
+            if (typeof posthog !== 'undefined') {
+                posthog.capture('issue03_cta_clicked', { position: loc, plan: plan, page: 'issue03_launch', value: value });
+            }
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'issue03_signup_intent', {
+                    currency: 'USD', value: value,
+                    plan_type: 'magazine-subscription',
+                    billing_cycle: plan,
+                    button_location: loc,
+                    source_page: 'issue03_launch'
+                });
+            }
+            if (typeof fbq !== 'undefined') {
+                const contentIds = plan === 'quarterly'
+                    ? ['44792925257894', '56688275914918']
+                    : ['44792925257894', '56688275914918', '56641965293734'];
+                fbq('track', 'AddToCart', {
+                    content_ids: contentIds,
+                    content_type: 'product',
+                    content_category: 'issue03_launch',
+                    value: value, currency: 'USD'
+                });
+                fbq('track', 'InitiateCheckout', {
+                    value: value, currency: 'USD',
+                    num_items: contentIds.length,
+                    content_category: 'issue03_' + plan
+                });
+                fbq('trackCustom', 'Issue03SignupIntent', { plan: plan, value: value, currency: 'USD', button_location: loc });
+            }
+            if (typeof _learnq !== 'undefined') {
+                _learnq.push(['track', 'Started Checkout', {
+                    $event_id: 'issue03_' + loc + '_' + Date.now(),
+                    $value: value,
+                    ItemNames: plan === 'quarterly'
+                        ? ['AF+ All-Access Quarterly', 'Autostraddle Print Issue #03']
+                        : ['AF+ All-Access Annual', 'Autostraddle Print Issue #03', 'Sports Gay Foam Finger'],
+                    Categories: ['Magazine Subscription'],
+                    CheckoutURL: this.href,
+                    source: 'issue03_launch',
+                    plan: plan,
+                    button_location: loc
+                }]);
+                _learnq.push(['track', 'Issue03 Signup Intent', {
+                    plan: plan, value: value, button_location: loc, source: 'issue03_launch'
+                }]);
+            }
+        });
+    });
+
+    if (typeof posthog !== 'undefined') {
+        posthog.capture('issue03_page_viewed', { page: 'issue03_launch', referrer: document.referrer || 'direct' });
+    }
+</script>
+
+</body>
+</html>
