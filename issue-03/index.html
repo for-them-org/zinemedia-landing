@@ -125,6 +125,12 @@
         .review { background: white; padding: 1.5rem; border: 2px solid var(--ink); }
         .review p { font-size: 0.95rem; line-height: 1.5; font-style: italic; margin-bottom: 0.9rem; }
         .review .name { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); font-weight: 700; }
+        .review-featured { background: white; border: 2px solid var(--ink); padding: 2rem 1.75rem; margin-bottom: 1rem; }
+        @media (min-width: 760px) { .review-featured { padding: 2.5rem 2.5rem; } }
+        .review-featured h3 { font-family: 'Anton', sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.2rem); text-transform: uppercase; color: var(--orange); line-height: 1; margin-bottom: 0.9rem; }
+        .review-featured p { font-size: 1rem; line-height: 1.6; font-style: italic; margin-bottom: 1rem; max-width: 62ch; }
+        .review-featured .name { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); font-weight: 700; }
+        .review-featured .stars { color: var(--orange); font-size: 0.85rem; letter-spacing: 0.2em; margin-bottom: 0.9rem; }
 
         .faq { padding: 3rem 1.25rem 5rem; }
         .faq-inner { max-width: 720px; margin: 0 auto; }
@@ -242,6 +248,14 @@
     <section class="reviews">
         <div class="reviews-inner">
             <h2>What subscribers are saying</h2>
+
+            <div class="review-featured">
+                <div class="stars" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+                <h3>I cried</h3>
+                <p>"This zine isn't just something fun to look it. It is love, community, support, connection, pride, friendship, and so so much more. I cried when I first opened my package. Living in a tiny rural town in the foothills of Appalachia, there is not a lot of queer community. A magazine can not replace face to face human connection, but it sure can start to heal a little queers heart. This magazine means so much to me and I will cherish it forever."</p>
+                <span class="name">Callie M. · Verified Buyer</span>
+            </div>
+
             <div class="review-grid">
                 <div class="review">
                     <p>"Got mine in the mail today — first purchase of queer media after coming out and must say I'm emotional."</p>
