@@ -65,7 +65,14 @@
         body { min-height: 100vh; display: flex; flex-direction: column; }
         .page { flex: 1; }
 
-        .hero { background: var(--hero-bg); display: grid; place-items: center; padding: 3rem 1.25rem 4rem; }
+        /* Studio Arsh ball mascots — decorative singles, never over text/CTAs */
+        .mascot { position: absolute; pointer-events: none; height: auto; z-index: 2; }
+        .mascot-hero { top: 1rem; right: 2%; width: clamp(64px, 9vw, 140px); transform: rotate(9deg); }
+        .mascot-inside { top: -1.4rem; right: 3%; width: clamp(56px, 8vw, 120px); transform: rotate(-8deg); }
+        .mascot-reviews { top: -1.8rem; left: 2%; width: clamp(60px, 8vw, 124px); transform: rotate(-10deg); }
+        .mascot-faq { bottom: 0.75rem; right: 3%; width: clamp(56px, 7vw, 110px); transform: rotate(7deg); }
+
+        .hero { background: var(--hero-bg); display: grid; place-items: center; padding: 3rem 1.25rem 4rem; position: relative; }
         .hero-inner { max-width: 1080px; width: 100%; display: grid; gap: 2rem; }
         @media (min-width: 880px) {
             .hero { padding: 4.5rem 2rem 5.5rem; }
@@ -106,7 +113,7 @@
         .why-num { font-family: 'Anton', sans-serif; font-size: 3rem; color: var(--mustard); line-height: 1; margin-bottom: 0.4rem; }
         .why-label { font-size: 0.95rem; line-height: 1.4; color: rgba(251,243,228,0.88); }
 
-        .inside { padding: 4rem 1.25rem 1rem; }
+        .inside { padding: 4rem 1.25rem 1rem; position: relative; }
         .inside-inner { max-width: 900px; margin: 0 auto; }
         .inside h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2.5rem; }
         /* Scan = 1/3 width, one-liner = 2/3, alternating sides. Scans are single
@@ -135,7 +142,7 @@
         .gift-copy h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.7rem, 3.5vw, 2.4rem); text-transform: uppercase; line-height: 1.02; margin-bottom: 0.8rem; }
         .gift-copy p { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.88); }
 
-        .reviews { padding: 3rem 1.25rem; }
+        .reviews { padding: 3rem 1.25rem; position: relative; }
         .reviews-inner { max-width: 980px; margin: 0 auto; }
         .reviews h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2rem; }
         .review-grid { display: grid; gap: 1rem; }
@@ -144,7 +151,7 @@
         .review p { font-size: 0.95rem; line-height: 1.5; font-style: italic; margin-bottom: 0.9rem; }
         .review .name { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); font-weight: 700; }
 
-        .faq { padding: 3rem 1.25rem 5rem; }
+        .faq { padding: 3rem 1.25rem 5rem; position: relative; }
         .faq-inner { max-width: 720px; margin: 0 auto; }
         .faq h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2rem; }
         details { border-bottom: 1px solid rgba(10,0,41,0.15); padding: 1.1rem 0; }
@@ -172,6 +179,7 @@
 <div class="page">
 
     <section class="hero">
+        <img class="mascot mascot-hero" src="/issue-03/mascot-star-tongue.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
         <div class="hero-inner">
             <div class="cover-wrap">
                 <img class="cover" src="/issue-03/issue-03-cover-stack.png" alt="Autostraddle Print Issue #03 — Sporty Spice. Be Gay Do Sports cover, Fall 2026" fetchpriority="high" decoding="async">
@@ -239,6 +247,7 @@
     </section>
 
     <section class="inside">
+        <img class="mascot mascot-inside" src="/issue-03/mascot-eightball.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
         <div class="inside-inner">
             <h2>Inside the sports issue</h2>
             <!-- PLACEHOLDER CAPTIONS: swap each one-liner below for Kayla's highlight lines
@@ -281,6 +290,7 @@
     </section>
 
     <section class="reviews">
+        <img class="mascot mascot-reviews" src="/issue-03/mascot-tennis-mitts.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
         <div class="reviews-inner">
             <h2>What subscribers are saying</h2>
 
@@ -306,6 +316,7 @@
     </section>
 
     <section class="faq">
+        <img class="mascot mascot-faq" src="/issue-03/mascot-disco-cats.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
         <div class="faq-inner">
             <h2>Questions</h2>
 
