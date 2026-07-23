@@ -109,6 +109,7 @@
         .inside { padding: 4rem 1.25rem 1rem; position: relative; }
         .inside-inner { max-width: 900px; margin: 0 auto; }
         .inside h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2.5rem; }
+        .inside h2 img { height: 1.45em; width: auto; vertical-align: -0.4em; margin-left: 0.45rem; transform: rotate(9deg); filter: drop-shadow(0 3px 5px rgba(0,0,0,0.18)); }
         /* Scan = 1/3 width, one-liner = 2/3, alternating sides. Scans are single
            7x10 portrait pages — they float free (no box), capped at 25vh on mobile. */
         .inside-flow figure { margin: 0; display: flex; flex-direction: row; align-items: center; gap: 1.5rem; }
@@ -128,8 +129,9 @@
 
         .gift { padding: 3rem 1.25rem; }
         .gift-inner { max-width: 980px; margin: 0 auto; background: var(--green); color: white; display: grid; gap: 0; overflow: hidden; }
-        @media (min-width: 760px) { .gift-inner { grid-template-columns: 1fr 1.4fr; align-items: center; } }
-        .gift-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        @media (min-width: 640px) { .gift-inner { grid-template-columns: 1fr 1fr; align-items: stretch; } }
+        .gift-img { width: 100%; height: 100%; max-height: 45vh; object-fit: cover; display: block; }
+        @media (min-width: 640px) { .gift-img { max-height: none; } }
         .gift-copy { padding: 2rem 1.75rem; }
         .gift-copy .kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lilac); margin-bottom: 0.7rem; }
         .gift-copy h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.7rem, 3.5vw, 2.4rem); text-transform: uppercase; line-height: 1.02; margin-bottom: 0.8rem; }
@@ -182,7 +184,7 @@
             <div class="pitch">
                 <p class="kicker">Autostraddle Print · Issue #03 · Fall 2026</p>
                 <h1>Be gay. <em>Do sports.</em></h1>
-                <p class="lede"><strong>Sporty Spice is here.</strong> 200+ pages of queer sports obsession — essays, photography, reported features, and puzzles. Subscribe now and <strong>Issue #03 ships to your door</strong>.</p>
+                <p class="lede"><strong>Sporty Spice is here.</strong> 200+ pages of queer sports culture — essays, photography, reported features, and puzzles. Subscribe now and <strong>Issue #03 ships to your door</strong>.</p>
 
                 <div class="plans">
                     <a class="plan" href="#" data-cta="hero-annual" data-plan="annual">
@@ -242,7 +244,7 @@
 
     <section class="inside">
         <div class="inside-inner">
-            <h2>Inside the sports issue</h2>
+            <h2>Inside the sports issue<img src="/issue-03/mascot-monkey-orange.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></h2>
             <!-- PLACEHOLDER CAPTIONS: swap each one-liner below for Kayla's highlight lines
                  (and swap images for the matching page scans) before publish. -->
             <div class="inside-flow">
