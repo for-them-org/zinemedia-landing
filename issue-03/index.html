@@ -52,25 +52,18 @@
             /* Issue 03 palette — Autostraddle x Studio Arsh colour card (0426) */
             --bg: #fbf3e4;          /* cream */
             --ink: #000000;         /* black */
-            --green: #2c5e31;       /* varsity green */
+            --green: #006838;       /* varsity green (bright/saturated) */
             --lilac: #cdb9e6;
             --orange: #e0512f;
             --mustard: #d89b3b;
             --navy: #204476;
-            --hero-bg: var(--lilac);
+            --hero-bg: #e2edff;     /* light blue (Em's pick) */
             --muted: var(--navy);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body { background: var(--bg); color: var(--ink); font-family: 'Roboto Mono', monospace; -webkit-font-smoothing: antialiased; }
         body { min-height: 100vh; display: flex; flex-direction: column; }
         .page { flex: 1; }
-
-        /* Studio Arsh ball mascots — decorative singles, never over text/CTAs */
-        .mascot { position: absolute; pointer-events: none; height: auto; z-index: 2; }
-        .mascot-hero { top: 1rem; right: 2%; width: clamp(64px, 9vw, 140px); transform: rotate(9deg); }
-        .mascot-inside { top: -1.4rem; right: 3%; width: clamp(56px, 8vw, 120px); transform: rotate(-8deg); }
-        .mascot-reviews { top: -1.8rem; left: 2%; width: clamp(60px, 8vw, 124px); transform: rotate(-10deg); }
-        .mascot-faq { bottom: 0.75rem; right: 3%; width: clamp(56px, 7vw, 110px); transform: rotate(7deg); }
 
         .hero { background: var(--hero-bg); display: grid; place-items: center; padding: 3rem 1.25rem 4rem; position: relative; }
         .hero-inner { max-width: 1080px; width: 100%; display: grid; gap: 2rem; }
@@ -110,7 +103,7 @@
         .why-inner { max-width: 1080px; margin: 0 auto; display: grid; gap: 1.5rem; }
         @media (min-width: 880px) { .why-inner { grid-template-columns: repeat(3, 1fr); gap: 3rem; } .why { padding: 4rem 2rem; } }
         .why-item { text-align: center; }
-        .why-num { font-family: 'Anton', sans-serif; font-size: 3rem; color: var(--mustard); line-height: 1; margin-bottom: 0.4rem; }
+        .why-num { font-family: 'Anton', sans-serif; font-size: 3rem; color: var(--lilac); line-height: 1; margin-bottom: 0.4rem; }
         .why-label { font-size: 0.95rem; line-height: 1.4; color: rgba(251,243,228,0.88); }
 
         .inside { padding: 4rem 1.25rem 1rem; position: relative; }
@@ -138,7 +131,7 @@
         @media (min-width: 760px) { .gift-inner { grid-template-columns: 1fr 1.4fr; align-items: center; } }
         .gift-img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .gift-copy { padding: 2rem 1.75rem; }
-        .gift-copy .kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bg); opacity: 0.75; margin-bottom: 0.7rem; }
+        .gift-copy .kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lilac); margin-bottom: 0.7rem; }
         .gift-copy h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.7rem, 3.5vw, 2.4rem); text-transform: uppercase; line-height: 1.02; margin-bottom: 0.8rem; }
         .gift-copy p { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.88); }
 
@@ -147,7 +140,9 @@
         .reviews h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2rem; }
         .review-grid { display: grid; gap: 1rem; }
         @media (min-width: 760px) { .review-grid { grid-template-columns: repeat(2, 1fr); } }
-        .review { background: white; padding: 1.5rem; border: 2px solid var(--ink); }
+        .review { background: white; padding: 1.5rem; border: 2px solid var(--ink); display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: start; }
+        .review .talking-head { width: 64px; height: auto; transform: rotate(-6deg); filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2)); margin-top: 0.15rem; }
+        .review > div { min-width: 0; }
         .review p { font-size: 0.95rem; line-height: 1.5; font-style: italic; margin-bottom: 0.9rem; }
         .review .name { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); font-weight: 700; }
 
@@ -179,7 +174,6 @@
 <div class="page">
 
     <section class="hero">
-        <img class="mascot mascot-hero" src="/issue-03/mascot-star-tongue.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
         <div class="hero-inner">
             <div class="cover-wrap">
                 <img class="cover" src="/issue-03/issue-03-cover-stack.png" alt="Autostraddle Print Issue #03 — Sporty Spice. Be Gay Do Sports cover, Fall 2026" fetchpriority="high" decoding="async">
@@ -247,28 +241,27 @@
     </section>
 
     <section class="inside">
-        <img class="mascot mascot-inside" src="/issue-03/mascot-eightball.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
         <div class="inside-inner">
             <h2>Inside the sports issue</h2>
             <!-- PLACEHOLDER CAPTIONS: swap each one-liner below for Kayla's highlight lines
                  (and swap images for the matching page scans) before publish. -->
             <div class="inside-flow">
                 <figure>
-                    <div class="scan-wrap"><img src="/issue-03/issue-03-open.jpg" alt="Autostraddle Issue #03 open to a feature spread" loading="lazy" decoding="async"></div>
+                    <div class="scan-wrap"><img src="/issue-03/photo-reading.jpg" alt="Reading Autostraddle Issue #03 outside — open to the lesbian kickball feature" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
                         [Kayla's one-liner — why this spread rocks]
                     </figcaption>
                 </figure>
                 <figure>
-                    <div class="scan-wrap"><img src="/issue-03/issue-03-spread.jpg" alt="Collage art spread inside Autostraddle Issue #03" loading="lazy" decoding="async"></div>
+                    <div class="scan-wrap"><img src="/issue-03/photo-bookshelf.jpg" alt="Autostraddle Issue #03 held in a bookshop" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
                         [Kayla's one-liner — why this spread rocks]
                     </figcaption>
                 </figure>
                 <figure>
-                    <div class="scan-wrap"><img src="/issue-03/issue-03-pages.jpg" alt="Autostraddle Issue #03 pages fanned open" loading="lazy" decoding="async"></div>
+                    <div class="scan-wrap"><img src="/issue-03/photo-flatlay.jpg" alt="Autostraddle Issue #03 cover flat on concrete" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
                         [Kayla's one-liner — why this spread rocks]
@@ -283,40 +276,50 @@
             <img class="gift-img" src="/issue-03/foam-finger.jpg" alt="Sports Gay mini foam finger" loading="lazy" decoding="async">
             <div class="gift-copy">
                 <p class="kicker">Annual subscribers only</p>
-                <h2>Join annual, get a free Sports Gay Foam Finger</h2>
+                <h2>Join annual, get a free Gay Foam Finger</h2>
                 <p>A mini foam finger for the gay sports fan who wants everyone to know they're gay and also love sports. Free with an annual subscription, while they last.</p>
             </div>
         </div>
     </section>
 
     <section class="reviews">
-        <img class="mascot mascot-reviews" src="/issue-03/mascot-tennis-mitts.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
         <div class="reviews-inner">
             <h2>What subscribers are saying</h2>
 
             <div class="review-grid">
                 <div class="review">
+                    <img class="talking-head" src="/issue-03/mascot-disco-cats.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                    <div>
                     <p>"I cried. This zine isn't just something fun to look it. It is love, community, support, connection, pride, friendship, and so so much more. I cried when I first opened my package. Living in a tiny rural town in the foothills of Appalachia, there is not a lot of queer community. A magazine can not replace face to face human connection, but it sure can start to heal a little queers heart. This magazine means so much to me and I will cherish it forever."</p>
                     <span class="name">Callie M. · Verified Buyer</span>
+                    </div>
                 </div>
                 <div class="review">
+                    <img class="talking-head" src="/issue-03/mascot-star-tongue.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                    <div>
                     <p>"Got mine in the mail today — first purchase of queer media after coming out and must say I'm emotional."</p>
                     <span class="name">Lydia T.</span>
+                    </div>
                 </div>
                 <div class="review">
+                    <img class="talking-head" src="/issue-03/mascot-eightball.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                    <div>
                     <p>"Blown away. The design, the artwork, the content and writing — truly so good. As a reader you can see how much heart and soul went into it."</p>
                     <span class="name">Frances A.</span>
+                    </div>
                 </div>
                 <div class="review">
+                    <img class="talking-head" src="/issue-03/mascot-tennis-mitts.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                    <div>
                     <p>"Always love these Autostraddle zines. I like to get them as soon as they drop because it's such a conversation starter in my living room."</p>
                     <span class="name">Patches · Verified Purchase</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="faq">
-        <img class="mascot mascot-faq" src="/issue-03/mascot-disco-cats.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
         <div class="faq-inner">
             <h2>Questions</h2>
 
