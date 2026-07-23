@@ -65,18 +65,18 @@
         body { min-height: 100vh; display: flex; flex-direction: column; }
         .page { flex: 1; }
 
-        .hero { background: var(--hero-bg); display: grid; place-items: center; padding: 3rem 1.25rem 0; position: relative; overflow: hidden; }
+        .hero { background: var(--hero-bg); display: grid; place-items: center; padding: 2.5rem 1.25rem 3.5rem; position: relative; overflow: hidden; }
         .hero-inner { max-width: 1080px; width: 100%; display: grid; gap: 2rem; }
         @media (min-width: 880px) {
             .hero { padding: 4.5rem 2rem 0; }
             .hero-inner { grid-template-columns: 1.1fr 1fr; align-items: end; gap: 4rem; }
-            /* pitch left, hand enters bottom-right (cover-wrap keeps order: 2) */
+            .cover-wrap { order: 2; } /* pitch left, hand enters bottom-right */
             .pitch { padding-bottom: 4.5rem; }
         }
 
-        .cover-wrap { display: grid; place-items: end center; order: 2; }
-        .cover { width: 100%; max-width: 380px; height: auto; display: block; margin-bottom: -2px; transform: rotate(-2deg); transform-origin: bottom left; filter: drop-shadow(0 16px 22px rgba(10,0,41,0.25)); }
-        @media (min-width: 880px) { .cover { max-width: 480px; } }
+        .cover-wrap { display: grid; place-items: end center; }
+        .cover { width: 100%; max-width: 380px; height: auto; display: block; transform: rotate(-2deg) translateX(-9%); transform-origin: bottom left; filter: drop-shadow(0 16px 22px rgba(10,0,41,0.25)); }
+        @media (min-width: 880px) { .cover { max-width: 480px; margin-bottom: -2px; transform: rotate(-2deg); } }
 
         .pitch .kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.9rem; }
         .pitch h1 { font-family: 'Anton', sans-serif; font-size: clamp(2.8rem, 8vw, 5rem); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 1.1rem; }
@@ -92,7 +92,7 @@
         .plan-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
         .plan-name { font-family: 'Anton', sans-serif; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 0.02em; }
         .plan-price { font-family: 'Anton', sans-serif; font-size: 1.35rem; color: var(--green); white-space: nowrap; }
-        .plan-price small { font-family: 'Roboto Mono', monospace; font-size: 0.7rem; color: var(--muted); font-weight: 400; }
+        .plan-price small { display: block; font-family: 'Roboto Mono', monospace; font-size: 0.7rem; color: var(--muted); font-weight: 400; text-align: right; }
         .plan-perks { list-style: none; font-size: 0.82rem; line-height: 1.45; color: var(--muted); }
         .plan-perks li::before { content: "✓ "; color: var(--green); font-weight: 700; }
         .plan-cta { justify-self: start; background: var(--ink); color: white; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.65rem 1.3rem; border-radius: 999px; margin-top: 0.25rem; }
@@ -112,6 +112,20 @@
         .inside-inner { max-width: 900px; margin: 0 auto; }
         .inside h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2.5rem; }
         .inside h2 img { height: 1.45em; width: auto; vertical-align: -0.4em; margin-left: 0.45rem; transform: rotate(9deg); filter: drop-shadow(0 3px 5px rgba(0,0,0,0.18)); }
+        /* Mobile: IG-stories-style teaser (built by JS from the flow rows below) */
+        .stories { display: none; }
+        @media (max-width: 759px) {
+            .inside-flow { display: none; }
+            .stories { display: block; position: relative; max-width: 420px; margin: 0 auto; aspect-ratio: 3 / 4; overflow: hidden; border-radius: 14px; border: 2px solid var(--ink); background: var(--ink); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+            .stories img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.18s ease; }
+            .stories img.active { opacity: 1; }
+            .stories-bars { position: absolute; top: 0.6rem; left: 0.6rem; right: 0.6rem; display: flex; gap: 0.3rem; z-index: 3; }
+            .stories-bars span { flex: 1; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.45); }
+            .stories-bars span.done { background: #fff; }
+            .stories-caption { position: absolute; left: 0.9rem; right: 0.9rem; bottom: 0.9rem; z-index: 3; background: var(--bg); border: 2px solid var(--ink); padding: 0.6rem 0.8rem; font-size: 0.85rem; line-height: 1.45; }
+            .stories-caption .page-kicker { margin-bottom: 0.2rem; }
+        }
+
         /* Scan = 1/3 width, one-liner = 2/3, alternating sides. Scans are single
            7x10 portrait pages — they float free (no box), capped at 25vh on mobile. */
         .inside-flow figure { margin: 0; display: flex; flex-direction: row; align-items: center; gap: 1.5rem; }
@@ -122,7 +136,7 @@
         .inside-flow figure:nth-child(even) img { transform: rotate(1.5deg); }
         .inside-flow figcaption { flex: 1 1 66.666%; font-size: clamp(0.95rem, 1.8vw, 1.2rem); line-height: 1.55; }
         .inside-flow figure:nth-child(even) figcaption { text-align: right; }
-        .inside-flow .page-kicker { display: block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem; }
+        .page-kicker { display: block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem; }
         @media (min-width: 760px) {
             .inside-flow figure { gap: 2.5rem; }
             .inside-flow figure + figure { margin-top: 2rem; }
@@ -249,6 +263,7 @@
             <h2>Inside the sports issue<img src="/issue-03/mascot-monkey-orange.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></h2>
             <!-- PLACEHOLDER CAPTIONS: swap each one-liner below for Kayla's highlight lines
                  (and swap images for the matching page scans) before publish. -->
+            <div class="stories" role="button" tabindex="0" aria-label="Story teaser — tap to see the next spread"></div>
             <div class="inside-flow">
                 <figure>
                     <div class="scan-wrap"><img src="/issue-03/photo-reading.jpg" alt="Reading Autostraddle Issue #03 outside — open to the lesbian kickball feature" loading="lazy" decoding="async"></div>
@@ -452,6 +467,47 @@
             }
         });
     });
+
+    // Mobile stories teaser — mirrors the .inside-flow rows so content lives once
+    (function () {
+        var host = document.querySelector('.stories');
+        var figs = document.querySelectorAll('.inside-flow figure');
+        if (!host || !figs.length) return;
+        var bars = document.createElement('div'); bars.className = 'stories-bars';
+        var caption = document.createElement('div'); caption.className = 'stories-caption';
+        var imgs = [], caps = [];
+        figs.forEach(function (f, i) {
+            var src = f.querySelector('img');
+            var img = document.createElement('img');
+            img.src = src.src; img.alt = ''; img.setAttribute('aria-hidden', 'true'); img.loading = 'lazy'; img.decoding = 'async';
+            host.appendChild(img); imgs.push(img);
+            caps.push(f.querySelector('figcaption').innerHTML);
+            var b = document.createElement('span'); bars.appendChild(b);
+        });
+        host.appendChild(bars); host.appendChild(caption);
+        var cur = 0;
+        function show(i) {
+            cur = (i + imgs.length) % imgs.length;
+            imgs.forEach(function (im, j) { im.classList.toggle('active', j === cur); });
+            bars.querySelectorAll('span').forEach(function (b, j) { b.classList.toggle('done', j <= cur); });
+            caption.innerHTML = caps[cur];
+        }
+        show(0);
+        function advance(back) {
+            show(cur + (back ? -1 : 1));
+            if (typeof posthog !== 'undefined') {
+                posthog.capture('issue03_story_advanced', { index: cur, page: 'issue03_launch' });
+            }
+        }
+        host.addEventListener('click', function (e) {
+            var back = (e.clientX - host.getBoundingClientRect().left) < host.offsetWidth / 3;
+            advance(back);
+        });
+        host.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') { advance(true); e.preventDefault(); }
+            else if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') { advance(false); e.preventDefault(); }
+        });
+    })();
 
     if (typeof posthog !== 'undefined') {
         posthog.capture('issue03_page_viewed', { page: 'issue03_launch', referrer: document.referrer || 'direct' });
