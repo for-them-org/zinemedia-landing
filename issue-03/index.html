@@ -7,12 +7,12 @@
     <meta name="description" content="Subscribe to the Autostraddle print magazine. Issue #03 — the sports issue — ships now. Be gay. Do sports.">
     <meta property="og:title" content="Autostraddle Issue #03 — Sporty Spice">
     <meta property="og:description" content="Be gay. Do sports. Start your magazine subscription with Issue #03.">
-    <meta property="og:image" content="https://zinemedia.forthem.com/issue-03/issue-03-cover-stack.jpg">
+    <meta property="og:image" content="https://zinemedia.forthem.com/issue-03/photo-flatlay.jpg">
     <meta property="og:url" content="https://zinemedia.forthem.com/issue-03/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Anton&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/issue-03/issue-03-cover-stack.png" fetchpriority="high">
+    <link rel="preload" as="image" href="/issue-03/photo-bookshelf.jpg" fetchpriority="high">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -73,8 +73,8 @@
         }
 
         .cover-wrap { display: grid; place-items: center; }
-        .cover { width: 100%; max-width: 420px; height: auto; }
-        @media (min-width: 880px) { .cover { max-width: 500px; } }
+        .cover { width: 100%; max-width: 400px; height: auto; transform: rotate(-1.5deg); filter: drop-shadow(0 20px 28px rgba(10,0,41,0.28)); }
+        @media (min-width: 880px) { .cover { max-width: 460px; } }
 
         .pitch .kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.9rem; }
         .pitch h1 { font-family: 'Anton', sans-serif; font-size: clamp(2.8rem, 8vw, 5rem); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 1.1rem; }
@@ -85,8 +85,8 @@
         .plans { display: grid; gap: 0.9rem; max-width: 460px; }
         .plan { border: 2px solid var(--ink); background: white; padding: 1.1rem 1.25rem; display: grid; gap: 0.55rem; text-decoration: none; color: var(--ink); transition: transform 0.12s ease, box-shadow 0.12s ease; position: relative; }
         .plan:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--ink); }
-        .plan-tag { position: absolute; top: -0.85rem; left: 1rem; background: var(--orange); color: white; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.25rem 0.6rem; display: inline-flex; align-items: center; gap: 0.4rem; }
-        .plan-tag svg { width: 0.9em; height: 0.9em; flex: none; }
+        .plan-tag { position: absolute; top: -0.85rem; left: 1rem; background: var(--orange); color: white; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.25rem 0.6rem 0.25rem 2.1rem; }
+        .tag-finger { position: absolute; left: -1.1rem; bottom: -0.5rem; width: 2.7rem; height: auto; transform: rotate(-12deg); filter: drop-shadow(0 3px 5px rgba(0,0,0,0.3)); }
         .plan-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
         .plan-name { font-family: 'Anton', sans-serif; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 0.02em; }
         .plan-price { font-family: 'Anton', sans-serif; font-size: 1.35rem; color: var(--green); white-space: nowrap; }
@@ -176,7 +176,7 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="cover-wrap">
-                <img class="cover" src="/issue-03/issue-03-cover-stack.png" alt="Autostraddle Print Issue #03 — Sporty Spice. Be Gay Do Sports cover, Fall 2026" fetchpriority="high" decoding="async">
+                <img class="cover" src="/issue-03/photo-bookshelf.jpg" alt="Autostraddle Print Issue #03 — Sporty Spice, held in a bookshop. Be Gay Do Sports." fetchpriority="high" decoding="async">
             </div>
 
             <div class="pitch">
@@ -186,7 +186,7 @@
 
                 <div class="plans">
                     <a class="plan" href="#" data-cta="hero-annual" data-plan="annual">
-                        <span class="plan-tag"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.2 2.6c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8v7h.6l.5-1.9c.7-2.6 4.6-2 4.3.7l-.4 3.6c.9.2 1.6 1 1.6 2v5.2c0 2.1-1.7 3.8-3.8 3.8H9.2c-2.1 0-3.8-1.7-3.8-3.8v-5.8c0-.9.6-1.7 1.4-1.9l.4-.1V2.6zm-1 17.6c0 1.6 1.3 3 3 3h4.4c1.6 0 3-1.3 3-3v-.8H6.2v.8z"/></svg>Comes with a foam finger</span>
+                        <span class="plan-tag"><img class="tag-finger" src="/issue-03/foam-finger-cut.png" alt="" aria-hidden="true">Comes with a foam finger</span>
                         <span class="plan-head">
                             <span class="plan-name">Annual</span>
                             <span class="plan-price">$8.17/month <small>· $98 billed yearly</small></span>
@@ -248,13 +248,6 @@
             <div class="inside-flow">
                 <figure>
                     <div class="scan-wrap"><img src="/issue-03/photo-reading.jpg" alt="Reading Autostraddle Issue #03 outside — open to the lesbian kickball feature" loading="lazy" decoding="async"></div>
-                    <figcaption>
-                        <span class="page-kicker">From the issue</span>
-                        [Kayla's one-liner — why this spread rocks]
-                    </figcaption>
-                </figure>
-                <figure>
-                    <div class="scan-wrap"><img src="/issue-03/photo-bookshelf.jpg" alt="Autostraddle Issue #03 held in a bookshop" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
                         [Kayla's one-liner — why this spread rocks]
