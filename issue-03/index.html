@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Anton&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/issue-03/photo-bookshelf.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="/issue-03/hero-hand.png" fetchpriority="high">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -65,16 +65,18 @@
         body { min-height: 100vh; display: flex; flex-direction: column; }
         .page { flex: 1; }
 
-        .hero { background: var(--hero-bg); display: grid; place-items: center; padding: 3rem 1.25rem 4rem; position: relative; }
+        .hero { background: var(--hero-bg); display: grid; place-items: center; padding: 3rem 1.25rem 0; position: relative; overflow: hidden; }
         .hero-inner { max-width: 1080px; width: 100%; display: grid; gap: 2rem; }
         @media (min-width: 880px) {
-            .hero { padding: 4.5rem 2rem 5.5rem; }
-            .hero-inner { grid-template-columns: 1.1fr 1fr; align-items: center; gap: 4rem; }
+            .hero { padding: 4.5rem 2rem 0; }
+            .hero-inner { grid-template-columns: 1.1fr 1fr; align-items: end; gap: 4rem; }
+            /* pitch left, hand enters bottom-right (cover-wrap keeps order: 2) */
+            .pitch { padding-bottom: 4.5rem; }
         }
 
-        .cover-wrap { display: grid; place-items: center; }
-        .cover { width: 100%; max-width: 400px; height: auto; transform: rotate(-1.5deg); filter: drop-shadow(0 20px 28px rgba(10,0,41,0.28)); }
-        @media (min-width: 880px) { .cover { max-width: 460px; } }
+        .cover-wrap { display: grid; place-items: end center; order: 2; }
+        .cover { width: 100%; max-width: 380px; height: auto; display: block; margin-bottom: -2px; transform: rotate(-2deg); transform-origin: bottom left; filter: drop-shadow(0 16px 22px rgba(10,0,41,0.25)); }
+        @media (min-width: 880px) { .cover { max-width: 480px; } }
 
         .pitch .kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.9rem; }
         .pitch h1 { font-family: 'Anton', sans-serif; font-size: clamp(2.8rem, 8vw, 5rem); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 1.1rem; }
@@ -178,7 +180,7 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="cover-wrap">
-                <img class="cover" src="/issue-03/photo-bookshelf.jpg" alt="Autostraddle Print Issue #03 — Sporty Spice, held in a bookshop. Be Gay Do Sports." fetchpriority="high" decoding="async">
+                <img class="cover" src="/issue-03/hero-hand.png" alt="A hand holding Autostraddle Print Issue #03 — Sporty Spice. Be Gay Do Sports." fetchpriority="high" decoding="async">
             </div>
 
             <div class="pitch">
