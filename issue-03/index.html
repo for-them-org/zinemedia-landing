@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Anton&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/issue-03/issue-03-cover-stack.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="/issue-03/issue-03-cover-stack.png" fetchpriority="high">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -49,12 +49,16 @@
 
     <style>
         :root {
-            --bg: #f5f1e6;          /* house LP cream */
-            --hero-bg: #e2edff;     /* matches the mockup ground */
-            --ink: #0a0029;         /* house LP ink */
-            --orange: #e84e28;      /* Issue 03 key colour */
-            --green: #006838;       /* Issue 03 key colour */
-            --muted: #6b6478;
+            /* Issue 03 palette — Autostraddle x Studio Arsh colour card (0426) */
+            --bg: #fbf3e4;          /* cream */
+            --ink: #000000;         /* black */
+            --green: #2c5e31;       /* varsity green */
+            --lilac: #cdb9e6;
+            --orange: #e0512f;
+            --mustard: #d89b3b;
+            --navy: #204476;
+            --hero-bg: var(--lilac);
+            --muted: var(--navy);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body { background: var(--bg); color: var(--ink); font-family: 'Roboto Mono', monospace; -webkit-font-smoothing: antialiased; }
@@ -72,7 +76,7 @@
         .cover { width: 100%; max-width: 420px; height: auto; }
         @media (min-width: 880px) { .cover { max-width: 500px; } }
 
-        .pitch .kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.9rem; }
+        .pitch .kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.9rem; }
         .pitch h1 { font-family: 'Anton', sans-serif; font-size: clamp(2.8rem, 8vw, 5rem); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 1.1rem; }
         .pitch h1 em { font-style: normal; color: var(--green); }
         .pitch .lede { font-size: clamp(1rem, 1.6vw, 1.15rem); line-height: 1.5; color: var(--muted); margin-bottom: 2rem; max-width: 38ch; }
@@ -99,24 +103,27 @@
         .why-inner { max-width: 1080px; margin: 0 auto; display: grid; gap: 1.5rem; }
         @media (min-width: 880px) { .why-inner { grid-template-columns: repeat(3, 1fr); gap: 3rem; } .why { padding: 4rem 2rem; } }
         .why-item { text-align: center; }
-        .why-num { font-family: 'Anton', sans-serif; font-size: 3rem; color: var(--orange); line-height: 1; margin-bottom: 0.4rem; }
-        .why-label { font-size: 0.95rem; line-height: 1.4; color: rgba(245,241,230,0.85); }
+        .why-num { font-family: 'Anton', sans-serif; font-size: 3rem; color: var(--mustard); line-height: 1; margin-bottom: 0.4rem; }
+        .why-label { font-size: 0.95rem; line-height: 1.4; color: rgba(251,243,228,0.88); }
 
         .inside { padding: 4rem 1.25rem 1rem; }
         .inside-inner { max-width: 900px; margin: 0 auto; }
         .inside h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2.5rem; }
-        .inside-flow figure { margin: 0 0 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
-        .inside-flow img { width: 100%; max-width: 460px; height: auto; display: block; filter: drop-shadow(0 18px 24px rgba(10,0,41,0.22)); transform: rotate(-1.5deg); }
+        /* Scan = 1/3 width, one-liner = 2/3, alternating sides. Scans are single
+           7x10 portrait pages — they float free (no box), capped at 25vh on mobile. */
+        .inside-flow figure { margin: 0; display: flex; flex-direction: row; align-items: center; gap: 1.5rem; }
+        .inside-flow figure + figure { margin-top: 1.25rem; }
+        .inside-flow figure:nth-child(even) { flex-direction: row-reverse; }
+        .inside-flow .scan-wrap { flex: 0 0 33.333%; display: grid; place-items: center; }
+        .inside-flow img { max-width: 100%; max-height: 25vh; width: auto; height: auto; display: block; filter: drop-shadow(0 14px 20px rgba(0,0,0,0.25)); transform: rotate(-1.5deg); }
         .inside-flow figure:nth-child(even) img { transform: rotate(1.5deg); }
-        .inside-flow figcaption { font-size: 0.9rem; line-height: 1.55; max-width: 34ch; }
+        .inside-flow figcaption { flex: 1 1 66.666%; font-size: clamp(0.95rem, 1.8vw, 1.2rem); line-height: 1.55; }
+        .inside-flow figure:nth-child(even) figcaption { text-align: right; }
         .inside-flow .page-kicker { display: block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem; }
         @media (min-width: 760px) {
-            .inside-flow figure { flex-direction: row; gap: 2.5rem; margin-bottom: 0; }
-            .inside-flow figure:nth-child(even) { flex-direction: row-reverse; }
-            .inside-flow figure + figure { margin-top: -2.5rem; }
-            .inside-flow img { width: 55%; }
-            .inside-flow figcaption { width: 40%; }
-            .inside-flow figure:nth-child(even) figcaption { text-align: right; }
+            .inside-flow figure { gap: 2.5rem; }
+            .inside-flow figure + figure { margin-top: 2rem; }
+            .inside-flow img { max-height: 42vh; }
         }
 
         .gift { padding: 3rem 1.25rem; }
@@ -167,7 +174,7 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="cover-wrap">
-                <img class="cover" src="/issue-03/issue-03-cover-stack.jpg" alt="Autostraddle Print Issue #03 — Sporty Spice. Be Gay Do Sports cover, Fall 2026" fetchpriority="high" decoding="async">
+                <img class="cover" src="/issue-03/issue-03-cover-stack.png" alt="Autostraddle Print Issue #03 — Sporty Spice. Be Gay Do Sports cover, Fall 2026" fetchpriority="high" decoding="async">
             </div>
 
             <div class="pitch">
@@ -238,21 +245,21 @@
                  (and swap images for the matching page scans) before publish. -->
             <div class="inside-flow">
                 <figure>
-                    <img src="/issue-03/issue-03-open.jpg" alt="Autostraddle Issue #03 open to a feature spread" loading="lazy" decoding="async">
+                    <div class="scan-wrap"><img src="/issue-03/issue-03-open.jpg" alt="Autostraddle Issue #03 open to a feature spread" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
                         [Kayla's one-liner — why this spread rocks]
                     </figcaption>
                 </figure>
                 <figure>
-                    <img src="/issue-03/issue-03-spread.jpg" alt="Collage art spread inside Autostraddle Issue #03" loading="lazy" decoding="async">
+                    <div class="scan-wrap"><img src="/issue-03/issue-03-spread.jpg" alt="Collage art spread inside Autostraddle Issue #03" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
                         [Kayla's one-liner — why this spread rocks]
                     </figcaption>
                 </figure>
                 <figure>
-                    <img src="/issue-03/issue-03-pages.jpg" alt="Autostraddle Issue #03 pages fanned open" loading="lazy" decoding="async">
+                    <div class="scan-wrap"><img src="/issue-03/issue-03-pages.jpg" alt="Autostraddle Issue #03 pages fanned open" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
                         [Kayla's one-liner — why this spread rocks]
