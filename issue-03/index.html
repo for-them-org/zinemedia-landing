@@ -141,6 +141,8 @@
         .inside-flow figure:nth-child(even) figcaption { text-align: right; }
         .page-kicker { display: block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem; }
         @media (min-width: 760px) {
+            /* desktop shows a curated 5; the mobile stories teaser keeps all 13 */
+            .inside-flow figure:not(.desktop-keep) { display: none; }
             .inside-flow figure { gap: 2.5rem; }
             .inside-flow figure + figure { margin-top: 2rem; }
             .inside-flow img { max-height: 42vh; }
@@ -155,6 +157,8 @@
         .gift-copy .kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lilac); margin-bottom: 0.7rem; }
         .gift-copy h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.7rem, 3.5vw, 2.4rem); text-transform: uppercase; line-height: 1.02; margin-bottom: 0.8rem; }
         .gift-copy p { font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.88); }
+        .gift-cta { display: inline-block; margin-top: 1.1rem; background: var(--bg); color: var(--ink); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.7rem 1.4rem; border-radius: 999px; text-decoration: none; }
+        .gift-cta:hover { background: var(--orange); color: white; }
 
         .reviews { padding: 3rem 1.25rem; position: relative; }
         .reviews-inner { max-width: 980px; margin: 0 auto; }
@@ -179,7 +183,7 @@
         .upsell-overlay.open { display: flex; }
         .upsell { background: var(--bg); border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); max-width: 400px; width: 100%; padding: 1.6rem 1.5rem 1.5rem; position: relative; transform: rotate(-0.5deg); }
         .upsell .kicker { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.6rem; }
-        .upsell h3 { font-family: 'Anton', sans-serif; font-size: 1.55rem; line-height: 1.05; text-transform: uppercase; margin-bottom: 0.8rem; }
+        .upsell h3 { font-family: 'Anton', sans-serif; font-size: clamp(1.2rem, 4.6vw, 1.55rem); line-height: 1.05; text-transform: uppercase; margin-bottom: 0.8rem; text-wrap: balance; }
         .upsell p { font-size: 0.88rem; line-height: 1.55; color: var(--muted); margin-bottom: 1.2rem; }
         .upsell .upsell-cta { display: block; text-align: center; background: var(--ink); color: white; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.85rem 1.2rem; border-radius: 999px; text-decoration: none; margin-bottom: 0.9rem; }
         .upsell .upsell-cta:hover { background: var(--orange); }
@@ -202,8 +206,8 @@
         .sticky-sub { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
         .sticky-btn { background: var(--orange); color: white; padding: 0.7rem 1.2rem; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
 
-        footer { background: var(--ink); color: rgba(245,241,230,0.7); padding: 1.5rem 1.25rem 5rem; text-align: center; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
-        @media (min-width: 880px) { footer { padding: 2rem 2rem 6.5rem; } }
+        footer { background: var(--ink); color: rgba(245,241,230,0.7); padding: 1.5rem 1.25rem 8rem; text-align: center; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+        @media (min-width: 880px) { footer { padding: 2rem 2rem 7.5rem; } }
     </style>
 </head>
 <body>
@@ -220,8 +224,8 @@
 
             <div class="pitch">
                 <p class="kicker">Autostraddle Print · Issue #03 · Fall 2026</p>
-                <h1>Be gay. <em>Do sports.</em></h1>
-                <p class="lede"><strong>Sporty Spice is here.</strong> 200+ pages of queer sports culture — essays, photography, reported features, and gay crosswords. Subscribe now and <strong>Issue #03 ships to your door</strong>.</p>
+                <h1>A queer magazine. <em>Made for us.</em></h1>
+                <p class="lede"><strong>Be Gay. Do Sports.</strong> 200+ pages of queer sports culture — essays, photography, reported features, and gay crosswords. Subscribe now and <strong>Issue #03 ships to your door</strong>.</p>
 
                 <div class="plans">
                     <a class="plan" href="#" data-cta="hero-annual" data-plan="annual">
@@ -287,7 +291,7 @@
                  mobile stories teaser updates automatically. -->
             <div class="stories" role="button" tabindex="0" aria-label="Story teaser — tap to see the next spread"></div>
             <div class="inside-flow">
-                <figure>
+                <figure class="desktop-keep">
                     <div class="scan-wrap"><img src="/issue-03/page-38.jpg" alt="Autostraddle Issue #03, page 38" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
@@ -322,14 +326,14 @@
                         Your gay guide to women's pro team sports — undoubtedly incomplete, but close.
                     </figcaption>
                 </figure>
-                <figure>
+                <figure class="desktop-keep">
                     <div class="scan-wrap"><img src="/issue-03/page-66.jpg" alt="Autostraddle Issue #03, page 66" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">The cover story</span>
                         Frankie de la Cretaz heads to Dallas to see the famously viral Texas Elite Spartans in action — everything they've won, and everything they're still owed.
                     </figcaption>
                 </figure>
-                <figure>
+                <figure class="desktop-keep">
                     <div class="scan-wrap"><img src="/issue-03/page-74.jpg" alt="Autostraddle Issue #03, page 74" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
@@ -343,7 +347,7 @@
                         Tilly Bridges laces up for roller derby and finds a truly trans-affirming sport. Captain Painway, reporting for duty.
                     </figcaption>
                 </figure>
-                <figure>
+                <figure class="desktop-keep">
                     <div class="scan-wrap"><img src="/issue-03/page-92.jpg" alt="Autostraddle Issue #03, page 92" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
@@ -357,7 +361,7 @@
                         All those pretty ballet girls — a personal essay by Analyssa Lopez.
                     </figcaption>
                 </figure>
-                <figure>
+                <figure class="desktop-keep">
                     <div class="scan-wrap"><img src="/issue-03/page-146.jpg" alt="Autostraddle Issue #03, page 146" loading="lazy" decoding="async"></div>
                     <figcaption>
                         <span class="page-kicker">From the issue</span>
@@ -389,6 +393,7 @@
                 <p class="kicker">Annual subscribers only</p>
                 <h2>Join annual, get a free Gay Foam Finger</h2>
                 <p>A mini foam finger for the gay sports fan who wants everyone to know they're gay and also love sports. Free with an annual subscription, while they last.</p>
+                <a class="gift-cta" href="#" data-cta="gift-annual" data-plan="annual">Join annual →</a>
             </div>
         </div>
     </section>
@@ -514,9 +519,9 @@
     <div class="upsell">
         <button class="upsell-close" type="button" aria-label="Close">×</button>
         <p class="kicker">Hold on — quick math</p>
-        <h3 id="upsell-oneoff-title">The zine is $30. The zine + membership is $28.</h3>
-        <p>Quarterly gets you Issue #03 free, full AF+ digital membership, and a new issue every three months. It is, genuinely, $2 less than buying the zine on its own.</p>
-        <a class="upsell-cta" href="#" data-cta="upsell-to-quarterly" data-plan="quarterly" data-upsell-continue="1">Switch to quarterly — $28 →</a>
+        <h3 id="upsell-oneoff-title">The zine is $30.<br>The zine + membership is $28.</h3>
+        <p>Issue #03 free, membership included, a new issue every quarter — for $2 less.</p>
+        <a class="upsell-cta" href="#" data-cta="upsell-to-quarterly" data-plan="quarterly" data-upsell-continue="1">Go quarterly — $28 →</a>
         <a class="upsell-no" href="#" data-cta="upsell-oneoff-continue" data-plan="oneoff" data-upsell-continue="1">No thanks, just Issue #03 — $30</a>
     </div>
 </div>
