@@ -512,9 +512,17 @@
         Object.keys(defaults).forEach(function (k) { utms[k] = incoming.get(k) || defaults[k]; });
         ['utm_content', 'utm_term'].forEach(function (k) { if (incoming.get(k)) { utms[k] = incoming.get(k); } });
 
-        var checkout = '/checkout?' + Object.keys(utms).map(function (k) {
-            return k + '=' + encodeURIComponent(utms[k]);
-        }).join('&');
+        // Each button stamps its position into utm_content (inbound creative kept
+        // as a prefix, e.g. "story3__hero-annual") so Shopify orders, GA4 sessions
+        // and Klaviyo flows can attribute the conversion to the exact button.
+        function checkoutUrl(stamp) {
+            var u = {};
+            Object.keys(utms).forEach(function (k) { u[k] = utms[k]; });
+            u.utm_content = stamp;
+            return '/checkout?' + Object.keys(u).map(function (k) {
+                return k + '=' + encodeURIComponent(u[k]);
+            }).join('&');
+        }
 
         var carts = {
             annual: [
@@ -532,10 +540,15 @@
         };
 
         Object.keys(carts).forEach(function (plan) {
-            var planCheckout = plan === 'oneoff' ? checkout : checkout + '&discount=ISSUE03LAUNCH';
-            var cartAdd = '/cart/add?' + carts[plan].join('&') + '&return_to=' + encodeURIComponent(planCheckout);
-            var href = 'https://forthem.com/cart/clear?return_to=' + encodeURIComponent(cartAdd);
-            document.querySelectorAll('[data-plan="' + plan + '"]').forEach(function (el) { el.href = href; });
+            document.querySelectorAll('[data-plan="' + plan + '"]').forEach(function (el) {
+                var cta = el.getAttribute('data-cta');
+                var stamp = utms.utm_content ? utms.utm_content + '__' + cta : cta;
+                el.dataset.utmContent = stamp;
+                var planCheckout = checkoutUrl(stamp);
+                if (plan !== 'oneoff') { planCheckout += '&discount=ISSUE03LAUNCH'; }
+                var cartAdd = '/cart/add?' + carts[plan].join('&') + '&return_to=' + encodeURIComponent(planCheckout);
+                el.href = 'https://forthem.com/cart/clear?return_to=' + encodeURIComponent(cartAdd);
+            });
         });
     })();
 
@@ -543,10 +556,11 @@
         el.addEventListener('click', function () {
             const loc = this.getAttribute('data-cta');
             const plan = this.getAttribute('data-plan');
-            const value = plan === 'quarterly' ? 28 : 98;
+            const stamp = this.dataset.utmContent || loc;
+            const value = plan === 'quarterly' ? 28 : plan === 'oneoff' ? 30 : 98;
 
             if (typeof posthog !== 'undefined') {
-                posthog.capture('issue03_cta_clicked', { position: loc, plan: plan, page: 'issue03_launch', value: value });
+                posthog.capture('issue03_cta_clicked', { position: loc, plan: plan, page: 'issue03_launch', value: value, utm_content: stamp });
             }
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'issue03_signup_intent', {
@@ -554,13 +568,16 @@
                     plan_type: 'magazine-subscription',
                     billing_cycle: plan,
                     button_location: loc,
+                    utm_content: stamp,
                     source_page: 'issue03_launch'
                 });
             }
             if (typeof fbq !== 'undefined') {
-                const contentIds = plan === 'quarterly'
-                    ? ['44792925257894', '56688275914918']
-                    : ['44792925257894', '56688275914918', '56641965293734'];
+                const contentIds = plan === 'oneoff'
+                    ? ['56688275914918']
+                    : plan === 'quarterly'
+                        ? ['44792925257894', '56688275914918']
+                        : ['44792925257894', '56688275914918', '56641965293734'];
                 fbq('track', 'AddToCart', {
                     content_ids: contentIds,
                     content_type: 'product',
@@ -572,23 +589,26 @@
                     num_items: contentIds.length,
                     content_category: 'issue03_' + plan
                 });
-                fbq('trackCustom', 'Issue03SignupIntent', { plan: plan, value: value, currency: 'USD', button_location: loc });
+                fbq('trackCustom', 'Issue03SignupIntent', { plan: plan, value: value, currency: 'USD', button_location: loc, utm_content: stamp });
             }
             if (typeof _learnq !== 'undefined') {
                 _learnq.push(['track', 'Started Checkout', {
                     $event_id: 'issue03_' + loc + '_' + Date.now(),
                     $value: value,
-                    ItemNames: plan === 'quarterly'
-                        ? ['AF+ All-Access Quarterly', 'Autostraddle Print Issue #03']
-                        : ['AF+ All-Access Annual', 'Autostraddle Print Issue #03', 'Sports Gay Foam Finger'],
+                    ItemNames: plan === 'oneoff'
+                        ? ['Autostraddle Print Issue #03']
+                        : plan === 'quarterly'
+                            ? ['AF+ All-Access Quarterly', 'Autostraddle Print Issue #03']
+                            : ['AF+ All-Access Annual', 'Autostraddle Print Issue #03', 'Sports Gay Foam Finger'],
                     Categories: ['Magazine Subscription'],
                     CheckoutURL: this.href,
                     source: 'issue03_launch',
                     plan: plan,
-                    button_location: loc
+                    button_location: loc,
+                    utm_content: stamp
                 }]);
                 _learnq.push(['track', 'Issue03 Signup Intent', {
-                    plan: plan, value: value, button_location: loc, source: 'issue03_launch'
+                    plan: plan, value: value, button_location: loc, utm_content: stamp, source: 'issue03_launch'
                 }]);
             }
         });
