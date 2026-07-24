@@ -635,7 +635,7 @@
             const loc = this.getAttribute('data-cta');
             const plan = this.getAttribute('data-plan');
             const stamp = this.dataset.utmContent || loc;
-            const value = plan === 'quarterly' ? 28 : plan === 'oneoff' ? 30 : 98;
+            const value = plan === 'quarterly' ? 28 : plan === 'oneoff' ? 30 : plan === 'annualbundle' ? 158 : 98;
 
             if (typeof posthog !== 'undefined') {
                 posthog.capture('issue03_cta_clicked', { position: loc, plan: plan, page: 'issue03_launch', value: value, utm_content: stamp });
@@ -655,7 +655,9 @@
                     ? ['56688275914918']
                     : plan === 'quarterly'
                         ? ['44792925257894', '56688275914918']
-                        : ['44792925257894', '56688275914918', '56641965293734'];
+                        : plan === 'annualbundle'
+                            ? ['44792925257894', '56688275914918', '56641965293734', '46416228581542', '46548050673830', '56214999859366']
+                            : ['44792925257894', '56688275914918', '56641965293734'];
                 fbq('track', 'AddToCart', {
                     content_ids: contentIds,
                     content_type: 'product',
@@ -677,7 +679,9 @@
                         ? ['Autostraddle Print Issue #03']
                         : plan === 'quarterly'
                             ? ['AF+ All-Access Quarterly', 'Autostraddle Print Issue #03']
-                            : ['AF+ All-Access Annual', 'Autostraddle Print Issue #03', 'Sports Gay Foam Finger'],
+                            : plan === 'annualbundle'
+                                ? ['AF+ All-Access Annual', 'Autostraddle Print Issue #03', 'Sports Gay Foam Finger', 'Autostraddle Print Issue #00', 'Autostraddle Print Issue #01', 'Autostraddle Print Issue #02']
+                                : ['AF+ All-Access Annual', 'Autostraddle Print Issue #03', 'Sports Gay Foam Finger'],
                     Categories: ['Magazine Subscription'],
                     CheckoutURL: this.href,
                     source: 'issue03_launch',
