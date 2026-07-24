@@ -164,6 +164,13 @@
         .review p { font-size: 0.95rem; line-height: 1.5; font-style: italic; margin-bottom: 0.9rem; }
         .review .name { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); font-weight: 700; }
 
+        .final { padding: 3.5rem 1.25rem 4.5rem; }
+        .final-inner { max-width: 460px; margin: 0 auto; }
+        .final h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.4rem); text-align: center; text-transform: uppercase; margin-bottom: 1.8rem; }
+        .oneoff { text-align: center; margin-top: 1.5rem; font-size: 0.82rem; color: var(--muted); }
+        .oneoff a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+        .oneoff a:hover { color: var(--orange); }
+
         .faq { padding: 3rem 1.25rem 5rem; position: relative; }
         .faq-inner { max-width: 720px; margin: 0 auto; }
         .faq h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); text-align: center; text-transform: uppercase; margin-bottom: 2rem; }
@@ -445,6 +452,40 @@
         </div>
     </section>
 
+    <section class="final">
+        <div class="final-inner">
+            <h2>Get the sports issue</h2>
+            <div class="plans">
+                <a class="plan" href="#" data-cta="final-annual" data-plan="annual">
+                    <span class="plan-head">
+                        <span class="plan-name">Annual</span>
+                        <span class="plan-price">$8.17/month <small>· $98 billed yearly</small></span>
+                    </span>
+                    <ul class="plan-perks">
+                        <li>Issue #03 ships now</li>
+                        <li>4 print issues a year</li>
+                        <li>Free Sports Gay Foam Finger</li>
+                        <li>Full AF+ digital membership included</li>
+                    </ul>
+                    <span class="plan-cta">Subscribe annual →</span>
+                </a>
+                <a class="plan" href="#" data-cta="final-quarterly" data-plan="quarterly">
+                    <span class="plan-head">
+                        <span class="plan-name">Quarterly</span>
+                        <span class="plan-price">$9.33/month <small>· $28 billed quarterly</small></span>
+                    </span>
+                    <ul class="plan-perks">
+                        <li>Issue #03 ships now</li>
+                        <li>A new issue every quarter</li>
+                        <li>Full AF+ digital membership included</li>
+                    </ul>
+                    <span class="plan-cta">Subscribe quarterly →</span>
+                </a>
+            </div>
+            <p class="oneoff">Just want the zine? <a href="#" data-cta="final-oneoff" data-plan="oneoff">Buy Issue #03 as a one-off — $30 →</a></p>
+        </div>
+    </section>
+
 </div>
 
 <div class="sticky-cta">
@@ -481,6 +522,9 @@
             quarterly: [
                 'items[0][id]=44792925257894', 'items[0][selling_plan]=1580236966', 'items[0][quantity]=1',
                 'items[1][id]=56688275914918', 'items[1][quantity]=1'
+            ],
+            oneoff: [
+                'items[0][id]=56688275914918', 'items[0][quantity]=1'
             ]
         };
 
