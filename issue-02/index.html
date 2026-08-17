@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Anton&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="/issue-02-cover.png" fetchpriority="high">
+    <link rel="preload" as="image" href="/issue-02-cover.avif" type="image/avif" fetchpriority="high">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -74,11 +74,6 @@
             .pitch { padding-bottom: 4.5rem; }
         }
 
-        .hero-stickers { display: none; }
-        @media (min-width: 880px) {
-            .hero-stickers { display: block; position: absolute; top: -1.5rem; right: -2.5rem; width: clamp(220px, 24vw, 340px); transform: rotate(8deg); filter: drop-shadow(0 10px 16px rgba(41,0,15,0.2)); z-index: 0; }
-            .hero-inner { position: relative; z-index: 1; }
-        }
         .cover-wrap { display: grid; place-items: end center; }
         .cover { width: 100%; max-width: 380px; height: auto; display: block; transform: rotate(-2deg) translateX(-9%); transform-origin: bottom left; filter: drop-shadow(0 16px 22px rgba(41,0,15,0.25)); }
         @media (min-width: 880px) { .cover { max-width: 480px; margin-bottom: -2px; transform: rotate(-2deg); } }
@@ -154,7 +149,8 @@
         }
 
         .gift { padding: 3rem 1.25rem; }
-        .gift-inner { max-width: 980px; margin: 0 auto; background: var(--green); color: white; display: grid; gap: 0; overflow: hidden; }
+        .gift-inner { max-width: 980px; margin: 0 auto; background: var(--green); color: white; display: grid; gap: 0; position: relative; }
+        .gift-stickers { position: absolute; right: -1.1rem; bottom: -1.6rem; width: clamp(130px, 18vw, 220px); transform: rotate(-8deg); filter: drop-shadow(0 8px 14px rgba(41,0,15,0.3)); }
         @media (min-width: 640px) { .gift-inner { grid-template-columns: 1fr 1fr; align-items: stretch; } }
         .gift-img { width: 100%; height: 100%; max-height: 45vh; object-fit: cover; display: block; }
         @media (min-width: 640px) { .gift-img { max-height: none; } }
@@ -222,10 +218,12 @@
 <div class="page">
 
     <section class="hero">
-        <img class="hero-stickers" src="/issue-02/stickers-spread.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
         <div class="hero-inner">
             <div class="cover-wrap">
-                <img class="cover" src="/issue-02-cover.png" alt="Autostraddle Print Issue #02 — King of Hearts. Chef Melissa King on the cover." fetchpriority="high" decoding="async">
+                <picture>
+                    <source srcset="/issue-02-cover.avif" type="image/avif">
+                    <img class="cover" src="/issue-02-cover.png" alt="Autostraddle Print Issue #02 — King of Hearts. Chef Melissa King on the cover." fetchpriority="high" decoding="async">
+                </picture>
             </div>
 
             <div class="pitch">
@@ -235,7 +233,7 @@
 
                 <div class="plans">
                     <a class="plan" href="#" data-cta="hero-annual" data-plan="annual">
-                        <span class="plan-tag"><img class="tag-finger" src="/issue-02/sticker-pack-cut.png" alt="" aria-hidden="true">Free sticker pack</span>
+                        <span class="plan-tag"><img class="tag-finger" src="/issue-02/sticker-pack-cut.webp" alt="" aria-hidden="true">Free sticker pack</span>
                         <span class="plan-head">
                             <span class="plan-name">Annual</span>
                             <span class="plan-price">$8.17/month <small>· $98 billed yearly</small></span>
@@ -291,7 +289,7 @@
 
     <section class="inside">
         <div class="inside-inner">
-            <h2>Inside the food issue<img src="/issue-02/mascot-monkey.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></h2>
+            <h2>Inside the food issue<img src="/issue-02/mascot-monkey.webp" alt="" aria-hidden="true" loading="lazy" decoding="async"></h2>
             <!-- 20 champion pages rendered from the Issue 02 print PDF; captions adapted
                  from the editors' blurb list (Riese, 2026-08-14), personal asides made generic.
                  Add/remove a row here and the mobile stories teaser updates automatically. -->
@@ -457,7 +455,8 @@
 
     <section class="gift">
         <div class="gift-inner">
-            <img class="gift-img" src="/issue-02/sticker-pack.jpg" alt="Very Gay Stickers — Eating Out sticker pack" loading="lazy" decoding="async">
+            <img class="gift-stickers" src="/issue-02/stickers-spread.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+            <img class="gift-img" src="/issue-02/sticker-pack.webp" alt="Very Gay Stickers — Eating Out sticker pack" loading="lazy" decoding="async">
             <div class="gift-copy">
                 <p class="kicker">Annual subscribers only</p>
                 <h2>Join annual, get free Very Gay Stickers</h2>
@@ -473,28 +472,28 @@
 
             <div class="review-grid">
                 <div class="review">
-                    <img class="talking-head" src="/issue-02/doodle-cherry.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                    <img class="talking-head" src="/issue-02/doodle-cherry.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
                     <div>
                     <p>"I cried. This zine isn't just something fun to look it. It is love, community, support, connection, pride, friendship, and so so much more. I cried when I first opened my package. Living in a tiny rural town in the foothills of Appalachia, there is not a lot of queer community. A magazine can not replace face to face human connection, but it sure can start to heal a little queers heart. This magazine means so much to me and I will cherish it forever."</p>
                     <span class="name">Callie M. · Verified Buyer</span>
                     </div>
                 </div>
                 <div class="review">
-                    <img class="talking-head" src="/issue-02/doodle-tomatoes.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                    <img class="talking-head" src="/issue-02/doodle-tomatoes.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
                     <div>
                     <p>"Got mine in the mail today — first purchase of queer media after coming out and must say I'm emotional."</p>
                     <span class="name">Lydia T.</span>
                     </div>
                 </div>
                 <div class="review">
-                    <img class="talking-head" src="/issue-02/doodle-banana.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                    <img class="talking-head" src="/issue-02/doodle-banana.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
                     <div>
                     <p>"Blown away. The design, the artwork, the content and writing — truly so good. As a reader you can see how much heart and soul went into it."</p>
                     <span class="name">Frances A.</span>
                     </div>
                 </div>
                 <div class="review">
-                    <img class="talking-head" src="/issue-02/doodle-mushroom.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+                    <img class="talking-head" src="/issue-02/doodle-mushroom.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
                     <div>
                     <p>"Always love these Autostraddle zines. I like to get them as soon as they drop because it's such a conversation starter in my living room."</p>
                     <span class="name">Patches · Verified Purchase</span>
