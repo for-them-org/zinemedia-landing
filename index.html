@@ -89,6 +89,7 @@
         .plan:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--ink); }
         .plan-tag { position: absolute; top: -1.1rem; right: -0.5rem; background: var(--orange); color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.35rem 3.2rem 0.35rem 0.75rem; border: 2px solid var(--ink); border-radius: 5px; transform: rotate(3deg); box-shadow: 2px 2px 0 var(--ink); }
         .tag-finger { position: absolute; right: -0.9rem; bottom: -0.4rem; width: 4rem; height: auto; transform: rotate(10deg); filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3)); }
+        .tag-stickers { width: 3.1rem; right: -1rem; bottom: -0.7rem; transform: rotate(-8deg); }
         .plan-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
         .plan-name { font-family: 'Anton', sans-serif; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 0.02em; }
         .plan-price { font-family: 'Anton', sans-serif; font-size: 1.35rem; color: var(--green); white-space: nowrap; }
@@ -229,7 +230,7 @@
 
                 <div class="plans">
                     <a class="plan" href="#" data-cta="hero-annual" data-plan="annual">
-                        <span class="plan-tag"><img class="tag-finger" src="/issue-03/foam-finger-cut.png" alt="" aria-hidden="true">Comes with a foam finger</span>
+                        <span class="plan-tag"><img class="tag-finger tag-stickers" src="/issue-03/sticker-pack-cut.png" alt="" aria-hidden="true">Free sticker pack</span>
                         <span class="plan-head">
                             <span class="plan-name">Annual</span>
                             <span class="plan-price">$8.17/month <small>· $98 billed yearly</small></span>
@@ -237,7 +238,7 @@
                         <ul class="plan-perks">
                             <li>Issue #03 ships now</li>
                             <li>4 print issues a year</li>
-                            <li>Free Sports Gay Foam Finger</li>
+                            <li>Free Very Gay Sticker Pack</li>
                             <li>Full AF+ digital membership included</li>
                         </ul>
                         <span class="plan-cta">Subscribe annual →</span>
@@ -409,11 +410,11 @@
 
     <section class="gift">
         <div class="gift-inner">
-            <img class="gift-img" src="/issue-03/foam-finger.jpg" alt="Sports Gay mini foam finger" loading="lazy" decoding="async">
+            <img class="gift-img" src="/issue-03/sticker-pack.jpg" alt="Very Gay Sticker Pack by For Them x Ash&amp;Chess — a fan of colourful queer stickers" loading="lazy" decoding="async">
             <div class="gift-copy">
                 <p class="kicker">Annual subscribers only</p>
-                <h2>Join annual, get a free Gay Foam Finger</h2>
-                <p>A mini foam finger for the gay sports fan who wants everyone to know they're gay and also love sports. Free with an annual subscription, while they last.</p>
+                <h2>Join annual, get a free Sticker Pack</h2>
+                <p>A pack of Very Gay Stickers made with Ash&amp;Chess — for your laptop, water bottle, and anything else that should know you're gay. Free with an annual subscription, while they last.</p>
                 <a class="gift-cta" href="#" data-cta="gift-annual" data-plan="annual">Join annual →</a>
             </div>
         </div>
@@ -504,7 +505,7 @@
                     <ul class="plan-perks">
                         <li>Issue #03 ships now</li>
                         <li>4 print issues a year</li>
-                        <li>Free Sports Gay Foam Finger</li>
+                        <li>Free Very Gay Sticker Pack</li>
                         <li>Full AF+ digital membership included</li>
                     </ul>
                     <span class="plan-cta">Subscribe annual →</span>
@@ -551,7 +552,7 @@
     <div class="upsell">
         <button class="upsell-close" type="button" aria-label="Close">×</button>
         <p class="kicker">One better</p>
-        <h3 id="upsell-quarterly-title">Annual is $8.17/month. The foam finger rides free.</h3>
+        <h3 id="upsell-quarterly-title">Annual is $8.17/month. The sticker pack rides free.</h3>
         <p>That's less than quarterly ($9.33/month) — with all four issues locked in.</p>
         <a class="upsell-cta" href="#" data-cta="upsell-to-annual" data-plan="annual" data-upsell-continue="1">Go annual — $8.17/month →</a>
         <a class="upsell-no" href="#" data-cta="upsell-quarterly-continue" data-plan="quarterly" data-upsell-continue="1">Stick with quarterly — $28</a>
@@ -598,7 +599,7 @@
             annual: [
                 'items[0][id]=44792925257894', 'items[0][selling_plan]=1574994086', 'items[0][quantity]=1',
                 'items[1][id]=56688275914918', 'items[1][quantity]=1',
-                'items[2][id]=56641965293734', 'items[2][quantity]=1'
+                'items[2][id]=56460475629734', 'items[2][quantity]=1'
             ],
             quarterly: [
                 'items[0][id]=44792925257894', 'items[0][selling_plan]=1580236966', 'items[0][quantity]=1',
@@ -610,7 +611,7 @@
             annualbundle: [
                 'items[0][id]=44792925257894', 'items[0][selling_plan]=1574994086', 'items[0][quantity]=1',
                 'items[1][id]=56688275914918', 'items[1][quantity]=1',
-                'items[2][id]=56641965293734', 'items[2][quantity]=1',
+                'items[2][id]=56460475629734', 'items[2][quantity]=1',
                 'items[3][id]=46416228581542', 'items[3][quantity]=1',
                 'items[4][id]=46548050673830', 'items[4][quantity]=1',
                 'items[5][id]=56214999859366', 'items[5][quantity]=1'
@@ -656,8 +657,8 @@
                     : plan === 'quarterly'
                         ? ['44792925257894', '56688275914918']
                         : plan === 'annualbundle'
-                            ? ['44792925257894', '56688275914918', '56641965293734', '46416228581542', '46548050673830', '56214999859366']
-                            : ['44792925257894', '56688275914918', '56641965293734'];
+                            ? ['44792925257894', '56688275914918', '56460475629734', '46416228581542', '46548050673830', '56214999859366']
+                            : ['44792925257894', '56688275914918', '56460475629734'];
                 fbq('track', 'AddToCart', {
                     content_ids: contentIds,
                     content_type: 'product',
@@ -680,8 +681,8 @@
                         : plan === 'quarterly'
                             ? ['AF+ All-Access Quarterly', 'Autostraddle Print Issue #03']
                             : plan === 'annualbundle'
-                                ? ['AF+ All-Access Annual', 'Autostraddle Print Issue #03', 'Sports Gay Foam Finger', 'Autostraddle Print Issue #00', 'Autostraddle Print Issue #01', 'Autostraddle Print Issue #02']
-                                : ['AF+ All-Access Annual', 'Autostraddle Print Issue #03', 'Sports Gay Foam Finger'],
+                                ? ['AF+ All-Access Annual', 'Autostraddle Print Issue #03', 'Very Gay Sticker Pack', 'Autostraddle Print Issue #00', 'Autostraddle Print Issue #01', 'Autostraddle Print Issue #02']
+                                : ['AF+ All-Access Annual', 'Autostraddle Print Issue #03', 'Very Gay Sticker Pack'],
                     Categories: ['Magazine Subscription'],
                     CheckoutURL: this.href,
                     source: 'issue03_launch',
